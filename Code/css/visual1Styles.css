@@ -1,0 +1,63 @@
+
+/* ---------- HEADER ---------- */
+#header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#header h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #4b4b4b;
+}
+
+#header h4.italic {
+    font-style: italic;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* ---------- ICON CIRCLES ---------- */
+
+.icon-circle:hover {
+    transform: scale(1);
+    stroke: #a69588;
+    fill: #cbb9a8;
+}
+
+/* ---------- ICON LABELS ---------- */
+.icon-label {
+    font-size: 16px;
+    fill: #fff;
+    font-weight: 500;
+}
+
+/* ---------- DETAILS / POPUP ---------- */
+#popup-place h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: #4b4b4b;
+}
+
+#popup-place img {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- SORT BUTTONS ---------- */
+#sort-buttons {
+    text-align: center;
+}
+
+#sort-buttons button {
+    border-radius: 20px;
+    background-color: #e6e4e0;
+    font-size: 14px;
+    padding: 8px 20px;
+}
+
+#sort-buttons button:hover {
+    background-color: #cbb9a8;
+}
