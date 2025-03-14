@@ -54,9 +54,9 @@ d3.csv("data/las_vegas_gp_impact.csv").then(data => {
         .force("y", d3.forceY(height / 2).strength(0.05))
         .on("tick", ticked);
 
-    const tooltip = d3.select("body")
+    const tooltip = d3.select("#gp-visualization")
         .append("div")
-        .attr("class", "tooltip");
+        .attr("class", "gp-tooltip");
     
 
     const bubbles = svg.selectAll("circle")

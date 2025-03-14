@@ -5,7 +5,6 @@ class IconVis {
         this.data = data;
 
         this.displayData = [...data];
-        this.currentSorter = "hostingFee"
 
         this.initVis();
     }
@@ -19,7 +18,7 @@ class IconVis {
             document.getElementById(vis.parentElement).getBoundingClientRect().width -
             vis.margin.left -
             vis.margin.right;
-        vis.height = 800;
+        vis.height = 400;
 
         // Create SVG drawing area
         vis.svg = d3
@@ -30,8 +29,8 @@ class IconVis {
             .append("g")
             .attr("transform", `translate(${vis.margin.left}, ${vis.margin.top})`);
 
-        //color scale
-        vis.colorScale = d3.scaleSequential(d3.interpolateYlOrRd);
+        // A color scale (example from red-yellow-green)
+        vis.colorScale = d3.scaleSequential(d3.interpolateRdYlGn);
 
         // Continue to wrangleData
         vis.wrangleData();
@@ -45,39 +44,38 @@ class IconVis {
     updateVis() {
         let vis = this;
 
-        //Grid parameters:
+        // Define grid parameters:
         const ncol = 4;
-        const gap = 10;
-        const iconDiameter = 110;
-        const radius = iconDiameter / 2;
+        const gap = 20;
+        const iconHeight = 40;
+        const iconWidth = (vis.width - (ncol - 1) * gap) / ncol;
 
-        // Colouring Icons
-        const maxFee = d3.max(vis.displayData, d => d[vis.currentSorter]);
-        vis.colorScale.domain([0, maxFee]);
+        // For coloring, base it on hostingFee
+        const maxFee = d3.max(vis.displayData, d => d.hostingFee);
+        vis.colorScale.domain([maxFee, 0]);
 
-        vis.displayData.sort((a, b) => a[vis.currentSorter] - b[vis.currentSorter]);
+        // Data binding for icons (rectangles)
+        let icons = vis.svg.selectAll(".icon-rect").data(vis.displayData, d => d.id);
 
-
-        // Data binding
-        let icons = vis.svg.selectAll(".icon-circle").data(vis.displayData, d => d.id);
-
-        // Enter
+        // Enter new icons
         let iconsEnter = icons.enter()
-            .append("circle")
-            .attr("class", "icon-circle")
+            .append("rect")
+            .attr("class", "icon-rect")
             .style("cursor", "pointer")
             .on("click", function (event, d) {
                 vis.showDetails(d);
             });
 
-        // Merge and update circles
+        // Merge and update icons with a grid layout
         iconsEnter.merge(icons)
             .transition()
             .duration(1000)
-            .attr("cx", (d, i) => (i % ncol) * (iconDiameter + gap) + radius)
-            .attr("cy", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius)
-            .attr("r", radius)
-            .attr("fill", d => vis.colorScale(d[vis.currentSorter]));
+            .attr("x", (d, i) => (i % ncol) * (iconWidth + gap))
+            .attr("y", (d, i) => Math.floor(i / ncol) * (iconHeight + gap))
+            .attr("width", iconWidth)
+            .attr("height", iconHeight)
+            .attr("rx", iconHeight / 2)
+            .attr("fill", d => vis.colorScale(d.hostingFee));
 
         icons.exit().remove();
 
@@ -90,34 +88,32 @@ class IconVis {
             .attr("text-anchor", "middle")
             .attr("fill", "#fff")
             .style("pointer-events", "none")
-            .text(d => d.ref);
+            .text(d => d.name);
 
         labelsEnter.merge(labels)
             .transition()
             .duration(1000)
-            // Center the label inside the circle
-            .attr("x", (d, i) => (i % ncol) * (iconDiameter + gap) + radius)
-            .attr("y", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius + 5);
+            .attr("x", (d, i) => (i % ncol) * (iconWidth + gap) + iconWidth / 2)
+            .attr("y", (d, i) => Math.floor(i / ncol) * (iconHeight + gap) + iconHeight / 2 + 5);
 
         labels.exit().remove();
     }
 
     sortBy(key) {
         let vis = this;
-        vis.currentSorter = key;
+        vis.displayData.sort((a, b) => a[key] - b[key]);
         vis.updateVis();
     }
 
     showDetails(d) {
         let detailDiv = document.getElementById(this.detailElement);
         detailDiv.innerHTML = `
-        <img src="${d.trackImage}" alt="${d.name} Track" style="max-width:300px; display:block; margin-bottom:10px;">
-        <h2>${d.name}</h2>
-        <p><strong>Hosting Fee:</strong> $${d.hostingFee} million</p>
-        <p><strong>Ticket Price:</strong> $${d.ticketPrice}</p>
-        <p><strong>Revenue:</strong> ${d.revenue}</p>
-        <p><strong>Fun Fact:</strong> ${d.funFact}</p>
-    `;
+            <h3>${d.name}</h3>
+            <img src="${d.trackImage}" alt="${d.name} Track" style="max-width:300px; display:block; margin-bottom:10px;">
+            <p><strong>Hosting Fee:</strong> ${d.hostingFee}</p>
+            <p><strong>Ticket Price:</strong> ${d.ticketPrice}</p>
+            <p><strong>Revenue:</strong> ${d.revenue}</p>
+            <p><strong>Fun Fact:</strong> ${d.funFact}</p>
+        `;
     }
-
 }
