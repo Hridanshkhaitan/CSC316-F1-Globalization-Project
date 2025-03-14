@@ -1,0 +1,84 @@
+#header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#header h1 {
+    font-size: 3rem;
+    color: #b29c73;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+#header h4 {
+    font-size: 1.3rem;
+    color: #b29c73;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+#viewership-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+#viewership-info h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#viewership-info ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+#viewership-info li {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: justify;
+}
+
+#viewership-info li strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+#viewership-info li::before {
+    content: "";
+    color: #3498db;
+    font-size: 3.5rem;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.75rem;
+    width: 35px;
+    height: 35px;
+    background: url("../img/racing.png") no-repeat center center / cover;
+}
+
+#viewership-info li {
+    padding-left: 2.5rem;
+}
+
+.x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+    stroke: #ccc;
+}
+.legend text {
+    font-size: 12px;
+    fill: #333;
+    font-family: sans-serif;
+}
+
+
