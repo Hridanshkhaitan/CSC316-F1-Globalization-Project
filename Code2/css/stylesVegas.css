@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#chart {
+    width: 100vw;
+    min-height: 100vh; 
+}
+
+
+#chart {
+    width: 100%;
+    height: 300%;
+    border: 1px solid #ccc;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.text-label {
+    text-anchor: middle;
+    font-size: 12px;
+    fill: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+
+circle {
+    filter: brightness(1.2) saturate(0.7);
+}
+
+.duplicate-bar {
+    filter: brightness(1.2) saturate(0.7);
+}
+
+rect {
+    filter: brightness(1.2) saturate(0.7);
+}
+#toggleChart {
+    display: block; 
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#toggleChart:hover {
+    background-color: #2980b9; 
+}
+
+
+.container {
+    text-align: center;
+}
+
+
+.tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+#header-container {
+    max-width: 900px;
+    margin: 20px auto; 
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+#header-container::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #ddd;
+    margin: 20px auto;
+}
+
