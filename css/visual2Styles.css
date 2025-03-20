@@ -1,0 +1,106 @@
+
+#visual2 #headerVisual2{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center; */
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+#visual2  #headerVisual2 h1 {
+    font-size: 3rem;
+    color: #b29c73;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+
+}
+
+#visual2  #headerVisual2 h4 {
+    font-size: 1.3rem;
+    color: #b29c73;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+#visual2  .demographics-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items: flex-start;*/
+}
+
+#visual2  .demographics-title {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#visual2  .demographics-subtitle {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#visual2  .demographics-column {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.9);
+
+}
+
+#visual2  .year-label {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#visual2  .big-stat {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+#visual2  .sub-stat {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 5px;
+}
+
+#visual2  .change-indicator {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+#visual2  .change-indicator.up {
+    color: #27ae60;
+}
+
+#visual2  #key-markets,
+#viewership-info {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-height: 620px;
+}
+
+#visual2  #explanation {
+    margin-top: 20px;
+}
+
+#visual2  .conclusion-text {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: #333;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 40px;
+    text-align: justify;
+
+}
+

@@ -1,0 +1,84 @@
+#visual3 #headerVisual3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#visual3 #headerVisual3 h1 {
+    font-size: 3rem;
+    color: #b29c73;
+    padding-bottom: 1rem;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+#visual3 #headerVisual3 h4 {
+    font-size: 1.3rem;
+    color: #b29c73;
+    font-weight: 400;
+    font-family: 'Georgia', serif;
+}
+
+#visual3 #viewership-infoVisual3 {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+#visual3 #viewership-infoVisual3 h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#visual3 #viewership-infoVisual3 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+#visual3 #viewership-infoVisual3 li {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: justify;
+}
+
+#visual3 #viewership-infoVisual3 li strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+#visual3 #viewership-infoVisual3 li::before {
+    content: "";
+    color: #3498db;
+    font-size: 3.5rem;
+    position: absolute;
+    left: 0.25rem;
+    top: 0.75rem;
+    width: 35px;
+    height: 35px;
+    background: url("../img/racing.png") no-repeat center center / cover;
+}
+
+#visual3 #viewership-infoVisual3 li {
+    padding-left: 2.5rem;
+}
+
+#visual3 .x-axis path,
+.x-axis line,
+.y-axis path,
+.y-axis line {
+    stroke: #ccc;
+}
+#visual3 .legend text {
+    font-size: 12px;
+    fill: #333;
+    font-family: sans-serif;
+}
+
+
