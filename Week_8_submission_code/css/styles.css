@@ -1,0 +1,123 @@
+
+/*}*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+#monaco-viz {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 100px 0;
+  background-color: #c3c1c1e6;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 700px;
+}
+
+#driver-info {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  border: 4px solid #ccc;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  width: 250px;
+}
+
+#driver-info .driver-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+#driver-info .driver-speed {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+#driver-info img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#add-drivers {
+  position: relative;
+  top: 600px;
+  left: 60px;
+  padding: 10px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#main-title {
+  position: relative;
+  top: 30px;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 0;
+}
+
+#main-title span {
+  font-weight: 700;
+}
+
+body {
+  background-color: #747171;
+  margin: 0;
+}
+
+
+/* ---- SECTION 1 Landing Page Styles ---- */
+#section1 {
+  background-image: url('../img/landingPageImg.jpeg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Dark overlay to increase contrast */
+#section1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Ensure text is above the overlay */
+#section1 h1,
+#section1 h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+#section1 h1 {
+  font-family: Blockletter, serif;
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 20rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#section1 h2 {
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
