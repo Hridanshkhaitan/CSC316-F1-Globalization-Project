@@ -2,9 +2,11 @@ function showBarChart(data) {
     console.log("triggered", data);
 
     const svg = d3.select("#chart svg");
+    console.log("-------------");
+    console.log(svg);
+    console.log("-------------");
     const width = +svg.attr("width");
     const height = +svg.attr("height");
-
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
 
@@ -33,7 +35,7 @@ function showBarChart(data) {
         .call(yAxis)
         .selectAll("text")
         .style("font-size", "12px");
-    
+    console.log("this far");
 
 
     svg.selectAll("text:not(.y-axis text)")
@@ -113,4 +115,15 @@ function showBarChart(data) {
         .attr("transform", "rotate(-10)")
         .attr("dx", "60px") 
         .attr("dy", "10px");
+}
+
+
+function clearBarChart() {
+    const svg = d3.select("#chart svg");
+
+    svg.selectAll("rect").remove();                
+    svg.selectAll(".bar-label").remove();            
+    svg.selectAll(".x-axis").remove();             
+    svg.selectAll(".y-axis").remove();              
+    svg.selectAll("text:not(.y-axis text)").remove(); 
 }

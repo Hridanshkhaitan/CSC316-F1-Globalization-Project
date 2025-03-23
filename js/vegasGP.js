@@ -1,4 +1,9 @@
-d3.csv("data/las_vegas_gp_impact.csv").then(data => {
+let Circ = true;
+let nodes = [];
+
+
+function start() {
+    d3.csv("data/las_vegas_gp_impact.csv").then(data => {
     if (!data || data.length === 0) {
         console.error("CSV did not load correctly or is empty.");
         return;
@@ -41,7 +46,8 @@ d3.csv("data/las_vegas_gp_impact.csv").then(data => {
 
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
-    const nodes = data.map(d => ({
+    
+    nodes = data.map(d => ({
         ...d,
         radius: sizeScale(d["Revenue (in million $)"])
     }));
@@ -54,7 +60,7 @@ d3.csv("data/las_vegas_gp_impact.csv").then(data => {
         .force("y", d3.forceY(height / 2).strength(0.05))
         .on("tick", ticked);
 
-    const tooltip = d3.select("#gp-visualization")
+    const tooltip = d3.select("#section7")
         .append("div")
         .attr("class", "gp-tooltip");
     
@@ -135,7 +141,8 @@ d3.csv("data/las_vegas_gp_impact.csv").then(data => {
                     textElement.append("tspan")
                         .text(line)
                         .attr("x", d.x)
-                        .attr("y", d.y + yOffset + i * lineHeight + VERTICAL_SHIFT);
+                        .attr("y", d.y  + i * lineHeight + VERTICAL_SHIFT)
+                        textElement.attr("text-anchor", "middle");
                 });
             });
         
@@ -148,23 +155,32 @@ d3.csv("data/las_vegas_gp_impact.csv").then(data => {
         svg.attr("height", Math.max(window.innerHeight, maxY + 50));
     }
 
-// Toggle vis button
-    document.getElementById("toggleChart").addEventListener("click", function () {
-        const isBarChart = d3.select("#chart").attr("data-view") === "bars";
-    
-    
-        if (isBarChart) {
-            d3.select("#chart svg").selectAll("*").remove();
-            location.reload();
-        } else {
-            showBarChart(nodes);
-            this.textContent = "Switch to Circles";
-            d3.select("#chart").attr("data-view", "bars");
-        }
-    });
-    
-    
-    
+});
+}
+
+document.getElementById("toggleChart").addEventListener("click", function () {
+    console.log("HEUBFIABOFUNEAOFNOAENFOUENFOANF");
+    console.log(Circ);
+
+    if (!Circ) {
+        Circ = true;
+        console.log("We have called this thing");
+        this.textContent = "Switch to Bar Chart";
+        clearBarChart();
+        d3.select("#chart").html("");
+
+        d3.selectAll("#section7 .gp-tooltip").remove();
+
+        d3.select("#chart").attr("data-view", null);
+        
+
+        start();
+    } else {
+        Circ = false;
+        showBarChart(nodes);
+        this.textContent = "Switch to Circles";
+        d3.select("#chart").attr("data-view", "bars");
+    }
 });
 
-
+start()

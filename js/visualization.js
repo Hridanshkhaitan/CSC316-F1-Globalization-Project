@@ -43,11 +43,20 @@ const driverImages = {
 
 let activeDriver = null;
 
+let data = [];
+
 d3.select("#monaco-viz")
   .append("button")
   .attr("id", "add-drivers")
   .text("Add Drivers")
-  .on("click", () => location.reload());
+  .on("click", () => {
+    data.forEach(driver => {
+      driver.circle.transition().duration(300).style("opacity", 1);
+    });
+    driverInfo.html("");
+    activeDriver = null;
+  });
+
 
 const driverInfo = d3.select("#monaco-viz")
   .append("div")
@@ -86,7 +95,8 @@ fetch('data/RaceCircuitMonaco.svg')
       .attr("stroke", "black")
       .attr("stroke-width", 2);
 
-    d3.csv("data/2024_Monaco_GP_Fastest_Laps.csv").then(data => {
+    d3.csv("data/2024_Monaco_GP_Fastest_Laps.csv").then(csvData => {
+      data = csvData;
       const pathElement = track.node();
       const pathLength = pathElement.getTotalLength();
 
@@ -109,7 +119,7 @@ fetch('data/RaceCircuitMonaco.svg')
               <button id='hide-driver'>Hide Driver</button>
             `);
             d3.select("#hide-driver").on("click", () => {
-              driver.circle.style("display", "none");
+              driver.circle.transition().duration(300).style("opacity", 0);
               driverInfo.html("");
             });
           });
