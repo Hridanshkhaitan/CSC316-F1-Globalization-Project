@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>F1 Race Overview</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/stylesVegas.css">
     <link rel="stylesheet" href="css/visual1Styles.css">
     <link rel="stylesheet" href="css/visual2Styles.css">
     <link rel="stylesheet" href="css/visual3Styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylesIntroduction.css">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.css">
@@ -26,42 +28,42 @@
     </div>
 
     <div class="section" id="section2">
-        <p>F1 races used to be primarily held in Europe but has been aiming to cast a wider net as time goes on, which can be seen in the decline of the number of races hosted in Europe</p> <a href="https://www.motorsinside.com/en/f1/news/35207-many-european-grand-prix-will-disappear-from-f1-calendar.html">[1]</a>
+        <!--        <h2>F1's Rapid Expansion</h2>-->
+        <!--        <p>F1 races used to be primarily held in Europe but has been aiming to cast a wider net as time goes on, which can be seen in the decline of the number of races hosted in Europe</p> <a href="https://www.motorsinside.com/en/f1/news/35207-many-european-grand-prix-will-disappear-from-f1-calendar.html">[1]</a>-->
 
-        <p>In 2017, Liberty Media became the owner of the Formula One brand and this could be part of different management decisions with respect to race schedules and prices.</p>
+        <!--        <p>In 2017, Liberty Media became the owner of the Formula One brand and this could be part of different management decisions with respect to race schedules and prices.</p>-->
 
-        <p>Unfortunately, ticket prices for attending F1 races have gone up significantly. While a lot of race video is available online and live races are available through both streaming services and cable networks, the in-person experience is hard to replicate from home for many fans. </p>
+        <!--        <p>Unfortunately, ticket prices for attending F1 races have gone up significantly. While a lot of race video is available online and live races are available through both streaming services and cable networks, the in-person experience is hard to replicate from home for many fans. </p>-->
 
-    </div>
-    <div class="section" id="section3">
-        <section class="container" id="visual1">
-            <div class="container">
-                <div class="row" id="header">
-                    <h2>The 2025 Formula 1 Calendar</h2>
-                    <h4 class="italic">Click on a race to learn more about it!</h4>
-                </div>
-                <div class="row" id="svg-container">
-                    <div class="col-sm-6" id="icon-place"></div>
-                    <div class="col-sm-6" id="popup-place"></div>
-                </div>
-                <div class="row" id="sort-buttons">
-                    <div class="col-sm-2" >
-                        <button onclick="sortBy('hostingFee')">Sort by Hosting Fee</button>
-                    </div>
-                    <div class="col-sm-2">
-                        <button onclick="sortBy('ticketPrice')">Sort by Ticket Price</button>
-                    </div>
-                </div>
+        <h2 class="section-title">F1'S RAPID EXPANSION</h2>
+
+        <div class="info-container">
+            <!-- First Box -->
+            <div class="info-box">
+                <h3>BRIEF OVERVIEW</h3>
+                <ul>
+                    <li>F1 used to be primarily European with 62% of races in 2016 being held in Europe.</li>
+                    <li>
+                        In 2017, Liberty Media purchased Formula 1. They've expanded F1 into a much more global phenomenon</li>
+                    <li>
+                        Europe only hosts 41% of the F1 races as of 2024.
+                    </li>
+                </ul>
+
             </div>
-        </section>
+
+            <!-- Second Box -->
+            <div class="info-box">
+                <h3>WITH GLOBALIZATION COME SOME PROBLEMS</h3>
+                <p>
+                    Unfortunately, ticket prices for attending F1 races have gone up significantly.
+                    While a lot of race video is available online and live races are accessible through streaming services
+                    and cable networks, the in-person experience is hard to replicate for many fans.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="section" id="section4">
-        <section class="container" id="monaco-viz">
-        <h1 id="main-title">2024 <span>Monaco GP</span> Speed Comparison</h1>
-        <div id="speed-comparison"></div>
-        </section>
-    </div>
-    <div class="section" id="section5 fp-auto-height">
+    <div class="section" id="section3 fp-auto-height">
         <section class="container" id="visual2">
             <div class="container">
                 <div class="row" id="headerVisual2">
@@ -138,25 +140,7 @@
         </section>
 
     </div>
-    <div class="section" id="section6">
-        <p>
-            The Las Vegas Grand Prix was one of the most significant investments in motorsport history,
-            with Formula 1 and local stakeholders investing hundreds of millions of dollars into the event’s
-            infrastructure, marketing, and logistics. The gamble paid off tremendously, with the race generating
-            an estimated $1.5 billion in total economic impact for Las Vegas in 2023. This figure outperformed
-            even Super Bowl LVIII, which had an estimated economic impact of around $1 billion. The Grand Prix
-            brought in hundreds of thousands of visitors, drove record-breaking hotel occupancy rates, and boosted
-            spending across casinos, restaurants, and entertainment venues, solidifying its status as a premier
-            global sporting event with a lasting economic footprint.
-        </p>
-    </div>
-    <div class="section" id="section7">
-        <div class="gp-container">
-            <button id="toggleChart">Switch to Bar Chart</button>
-            <div id="chart"></div>
-        </div>
-    </div>
-    <div class="section" id="section8 fp-auto-height">
+    <div class="section" id="section4 fp-auto-height">
         <section class="container" id="visual3">
             <div class="container">
                 <div class="row" id="headerVisual3">
@@ -178,6 +162,52 @@
 
                 </div>
             </div>
+        </section>
+    </div>
+    <div class="section" id="section5">
+        <section class="container" id="visual1">
+            <div class="container">
+                <div class="row" id="header">
+                    <h2>The 2025 Formula 1 Calendar</h2>
+                    <h4 class="italic">Click on a race to learn more about it!</h4>
+                </div>
+                <div class="row" id="svg-container">
+                    <div class="col-sm-6" id="icon-place"></div>
+                    <div class="col-sm-6" id="popup-place"></div>
+                </div>
+                <div class="row" id="sort-buttons">
+                    <div class="col-sm-2" >
+                        <button onclick="sortBy('hostingFee')">Sort by Hosting Fee</button>
+                    </div>
+                    <div class="col-sm-2">
+                        <button onclick="sortBy('ticketPrice')">Sort by Ticket Price</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="section" id="section6">
+        <p>
+            The Las Vegas Grand Prix was one of the most significant investments in motorsport history,
+            with Formula 1 and local stakeholders investing hundreds of millions of dollars into the event’s
+            infrastructure, marketing, and logistics. The gamble paid off tremendously, with the race generating
+            an estimated $1.5 billion in total economic impact for Las Vegas in 2023. This figure outperformed
+            even Super Bowl LVIII, which had an estimated economic impact of around $1 billion. The Grand Prix
+            brought in hundreds of thousands of visitors, drove record-breaking hotel occupancy rates, and boosted
+            spending across casinos, restaurants, and entertainment venues, solidifying its status as a premier
+            global sporting event with a lasting economic footprint.
+        </p>
+    </div>
+    <div class="section" id="section7">
+        <div class="gp-container">
+            <button id="toggleChart">Switch to Bar Chart</button>
+            <div id="chart"></div>
+        </div>
+    </div>
+    <div class="section" id="section8">
+        <section class="container" id="monaco-viz">
+            <h1 id="main-title">2024 <span>Monaco GP</span> Speed Comparison</h1>
+            <div id="speed-comparison"></div>
         </section>
     </div>
     <div class="section" id="section9">
@@ -220,33 +250,37 @@
 
     </div>
 
-    </div>
-    <!-- JS libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</div>
+<!-- JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Visualization scripts -->
-    <script src="js/visual1Main.js"></script>
-    <script src="js/iconVis.js"></script>
+<!-- Visualization scripts -->
+<script src="js/visual1Main.js"></script>
+<script src="js/iconVis.js"></script>
 
-    <script src="data/icon-data.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/visualization.js"></script>
-    <script src="js/vegasGP.js"></script>
-    <script src="js/bars.js"></script>
+<script src="data/icon-data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/visualization.js"></script>
+<script src="js/vegasGP.js"></script>
+<script src="js/bars.js"></script>
 
-    <script src="js/valuations.js"></script>
-    <script src="js/visual3Main.js"></script>
+<script src="js/valuations.js"></script>
+<script src="js/visual3Main.js"></script>
 
-    <script src="js/visual2Main.js"></script>
-    <script src="js/keyMarkets.js"></script>
+<script src="js/visual2Main.js"></script>
+<script src="js/keyMarkets.js"></script>
 
-    <script>
-        new fullpage('#fullpage', {
-            autoScrolling: true,
-            navigation: true,
-            navigationPosition: 'right'
-        });
-    </script>
+<script>
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+        navigationPosition: 'right',
+        // MAKE SURE TO REMOVE THE CODE BELOW !!!!
+        afterRender: function () {
+            fullpage_api.moveTo(2); // Moves to the second section
+        }
+    });
+</script>
 
 </body>
 </html>
