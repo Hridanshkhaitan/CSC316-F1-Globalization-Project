@@ -121,3 +121,7 @@ body {
   margin-top: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
+
+#visual5 {
+  height: 250px;
+}
