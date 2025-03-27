@@ -1,0 +1,118 @@
+
+/* SECTION 2: INTRODUCTION STYLING */
+
+/* Dark overlay to increase contrast */
+#section2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+#section2 h3,
+#section2 p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+
+}
+
+#section2 {
+    background-image: url('../img/landingPage.jpeg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+
+    position: absolute;
+    top: 120px;
+    font-style: italic;
+    right: 20px;
+}
+.content-section1 {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 150px;
+}
+.content-section2 {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+
+.section-heading {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.content-text {
+    font-size: 1.3rem;
+    text-align: right;
+    width: 70%;
+}
+
+#section2 p.conclusion-text {
+    width: 50%;
+    margin: 100px auto 40px;
+    padding-left: 200px;
+    font-style: italic;
+    font-size: 1.3rem;
+    text-align: center;
+    color: white;
+}
+
+.highlight {
+    color: #CD2D1E;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+.highlight:hover {
+    transform: scale(1.5);
+    text-shadow: 0 0 10px rgba(205, 45, 30, 0.5);
+}
+
+/* UNDERLINE WITH TWO LINES*/
+.line-container {
+    position: relative;
+    top: 60px;
+    right: -1190px;
+}
+
+.main-line {
+    width: 582px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+}
+
+.secondary-line {
+    width: 575px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    margin-top: 3px;
+}
+
+.accent-line {
+    position: absolute;
+    width: 10px;
+    height: 23px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    left: 580px;
+    top: 0;
+}
+
