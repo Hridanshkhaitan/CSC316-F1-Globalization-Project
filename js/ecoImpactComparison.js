@@ -175,6 +175,38 @@ class EcoVis {
       
         // Exit
         circles.exit().remove();
+        vis.renderLegend();
+
+      }
+      
+      renderLegend() {
+        let vis = this;
+        const legendDiv = document.getElementById("legend-container");
+        legendDiv.innerHTML = "";
+      
+        const keys = vis.colorScale.domain();
+      
+        keys.forEach(key => {
+          const item = document.createElement("div");
+          item.style.display = "inline-block";
+          item.style.margin = "0 10px";
+          item.style.fontSize = "12px";
+      
+          const colorBox = document.createElement("span");
+          colorBox.style.display = "inline-block";
+          colorBox.style.width = "12px";
+          colorBox.style.height = "12px";
+          colorBox.style.backgroundColor = vis.colorScale(key);
+          colorBox.style.marginRight = "6px";
+          colorBox.style.verticalAlign = "middle";
+      
+          const label = document.createElement("span");
+          label.textContent = key;
+      
+          item.appendChild(colorBox);
+          item.appendChild(label);
+          legendDiv.appendChild(item);
+        });
       }
       
       

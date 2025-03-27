@@ -275,6 +275,8 @@
 
         </section>
 
+        <div id="legend-container" style="text-align:center; margin-top: 15px;"></div>
+
         <div style="text-align: center; margin-top: 10px;">
             <span id="info-button" style="
               display: inline-block;
@@ -309,9 +311,36 @@
             Notice the success of races outside of Europe!
           </div>
           
+
+          
              
     </div>
-    <div></div> 
+    <div class="section" id="section11">
+        <section class="container" id="visual6">
+        </section>
+
+        <div id="revenue-info-message" style="
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            max-width: 300px;
+            margin: 8px auto 0 auto;
+            height: auto;
+            ">
+            The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
+        </div>
+          
+        
+          
+
+    </div> 
 
 </div>
 <!-- JS libraries -->
@@ -335,6 +364,9 @@
 
 <script src="js/ecoImpactComparison.js"></script>
 <script src="js/ecoVisSetUp.js"></script>
+
+<script src="js/revenueSetUp.js"></script>
+<script src="js/revenueVis.js"></script>
 
 <script>
     new fullpage('#fullpage', {
