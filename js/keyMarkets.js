@@ -70,7 +70,7 @@ class KeyMarkets {
             .attr("y", 35)
             .style("font-size", "16px")
             .style("font-weight", "400")
-            // .style("font-family", "Arial, sans-serif")
+            .style("fill", "#999999")
             .text("GEOGRAPHICAL LOCATION OF NEW FANS");
 
         // Card dimensions
@@ -130,23 +130,20 @@ class KeyMarkets {
 
         // UPDATE
         cardsMerge.select(".card-bg")
-            .transition()
-            // .duration(800)
             .attr("width", cardWidth)
             .attr("height", d => vis.heightScale(d.percentage));
 
         // UPDATE text
         cardsMerge.select(".card-country")
             .text(d => d.country)
-            .transition()
-            // .duration(800)
+
             .attr("x", cardWidth / 2)
             .attr("y", d => vis.heightScale(d.percentage) * 0.4);
 
         cardsMerge.select(".card-fans")
             .text(d => `${d.percentage}%`)
-            .transition()
-            .duration(800)
+            // .transition()
+            // .duration(800)
             .attr("x", cardWidth / 2)
             .attr("y", d => vis.heightScale(d.percentage) * 0.6);
 
