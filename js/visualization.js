@@ -48,7 +48,7 @@ let data = [];
 d3.select("#monaco-viz")
   .append("button")
   .attr("id", "add-drivers")
-  .text("Add Drivers")
+  .text("Show all Drivers")
   .on("click", () => {
     data.forEach(driver => {
       driver.circle.transition().duration(300).style("opacity", 1);
