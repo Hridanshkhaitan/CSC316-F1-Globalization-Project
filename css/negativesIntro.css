@@ -1,0 +1,59 @@
+/* SECTION 12: NEGATIVES INTRO*/
+
+/* Background*/
+#section12 {
+    background-image: url('../img/negativesIntro.jpeg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+/* Dark overlay to increase contrast */
+#section12::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.hidden-costs-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden-costs-container::before {
+    z-index: 1;
+}
+
+.hidden-costs-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hidden-costs-title {
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hidden-costs-subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.hidden-costs-divider {
+    width: 550px;
+    height: 4px;
+    background-color: #CD2D1E;
+    margin: 0 auto 30px auto;
+}
+
+.hidden-costs-description {
+    font-size: 1.5rem;
+    color: #e2e1e1;
+    margin: 0.5rem 0;
+}
