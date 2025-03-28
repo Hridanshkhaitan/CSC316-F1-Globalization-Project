@@ -1,0 +1,56 @@
+/* SECTION 5: VEGAS INTRO*/
+
+/* Background*/
+#section5 {
+    background-image: url('../img/vegasIntro.jpg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+/* Dark overlay to increase contrast */
+#section5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.vegas-experiment-container {
+    position: relative;
+}
+
+.vegas-experiment-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vegas-title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.vegas-subtitle {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+.vegas-divider {
+    width: 750px;
+    height: 4px;
+    background-color: #CD2D1E;
+    margin-bottom: 30px;
+}
+
+.vegas-description {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #e2e1e1;
+}

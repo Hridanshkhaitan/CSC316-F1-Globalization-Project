@@ -108,7 +108,7 @@ body {
 
 #section1 h1 {
   font-family: Blockletter, serif;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 900;
   margin-top: 20rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
@@ -116,7 +116,7 @@ body {
 
 #section1 h2 {
   font-family: 'Avenir Next', sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 300;
   margin-top: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
