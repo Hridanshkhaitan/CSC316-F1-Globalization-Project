@@ -32,11 +32,7 @@ class Valuations {
         // Create a tooltip
         vis.tooltip = d3.select("body")
             .append("div")
-            .style("position", "absolute")
-            .style("padding", "8px")
-            .style("background", "#fff")
-            .style("border", "1px solid #ccc")
-            .style("border-radius", "5px");
+            .attr("class", "tooltip-visual3")
 
         vis.wrangleData();
     }
@@ -67,7 +63,7 @@ class Valuations {
 
             // Revenue bars
             if (measure === "revenue" && year === "2019") return "#e74c3c"; // Red
-            if (measure === "revenue" && year === "2023") return "#c0392b"; // Darker Red
+            if (measure === "revenue" && year === "2023") return "#CD2D1E"; // Darker Red
         }
 
         const measures = ["valuation", "revenue"];
@@ -114,11 +110,12 @@ class Valuations {
                     .attr("y", 22);
 
                 // Circle background
-                iconGroup.append("circle")
-                    .attr("r", 15)
-                    .attr("cx", 0)
-                    .attr("cy", 35)
-                    .style("stroke", "darkgray");
+                iconGroup.append("rect")
+                    .attr("width", 26)
+                    .attr("height", 26)
+                    .attr("x", -13)
+                    .attr("y", 22)
+                    .style("stroke", "#666");
             });
 
         // Append y-axis
@@ -132,6 +129,8 @@ class Valuations {
             .attr("transform", "rotate(-90)")
             .attr("y", 0)
             .attr("x", -vis.height / 2)
+            .style("text-anchor", "middle")
+            .style("fill", "#e0e0e0")
             .text("Value ($M)");
 
         // Groups for each team
@@ -175,6 +174,9 @@ class Valuations {
                         let diff = teamData[0].value - teamData[1].value;
                         const measureLabel = (measure === "valuation") ? "Valuation" : "Revenue";
 
+                        const percentChange = d[measure]["change"];
+                        const changeColor = "#4caf50";
+
                         // Build HTML
                         vis.tooltip.html(`
                           <div>
@@ -183,7 +185,7 @@ class Valuations {
                           </div>
                           <div><strong>${measureLabel} 2023:</strong> $${teamData[0].value}M</div>
                           <div><strong>${measureLabel} 2019:</strong> $${teamData[1].value}M</div>
-                          <div><strong>Change:</strong> ${diff}M (${d[measure]["change"]}%)</div>
+                          <div><strong>Change:</strong> <span style="color:${changeColor}">$${diff}M (${percentChange}%)</span></div>
                         `);
 
                         // Show tooltip
@@ -207,7 +209,7 @@ class Valuations {
             { label: "Valuation 2019", color: "#3498db" },
             { label: "Valuation 2023", color: "#2980b9" },
             { label: "Revenue 2019",  color: "#e74c3c" },
-            { label: "Revenue 2023",  color: "#c0392b" }
+            { label: "Revenue 2023",  color: "#CD2D1E" }
         ];
 
         vis.legend = vis.svg.selectAll(".legend")
@@ -221,6 +223,8 @@ class Valuations {
             .attr("x", vis.width - 18)
             .attr("width", 18)
             .attr("height", 18)
+            .attr("rx", 2)
+            .attr("ry", 2)
             .style("fill", d => d.color);
 
         vis.legend.append("text")

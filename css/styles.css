@@ -122,14 +122,6 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-
-/*!* Adding background*!*/
-/*body {*/
-/*  background-color: #ffffff;*/
-/*  background-image: url('../img/landingPage.jpeg');*/
-/*  background-size: auto;*/
-/*}*/
-
 #visual5 {
   height: 250px;
 }
@@ -138,3 +130,14 @@ body {
   height: 300px;
   width: 100%;
 }
+
+
+/* FULLPAGE.JS ITEMS STYLING*/
+#fp-nav ul li a span {
+  background: #b29c73 !important;
+}
+
+#fp-nav ul li a.active span {
+  background: #ff3333 !important;
+}
+

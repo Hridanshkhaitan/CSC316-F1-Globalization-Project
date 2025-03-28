@@ -27,7 +27,6 @@
 
     </div>
 
-    <!-- Updated Section 2 HTML -->
     <div class="section" id="section2">
         <h2 class="section-title">F1'S RAPID EXPANSION</h2>
         <div class="line-container">
@@ -65,7 +64,6 @@
                     </div>
                     <h4>How a Netflix Show Transformed the Global F1 Fanbase</h4>
                 </div>
-
 
                 <div class="row" id="svg-containerVisual2">
                     <div class="col-sm-6" id="key-markets"></div>
@@ -142,6 +140,11 @@
             <div class="container">
                 <div class="row" id="headerVisual3">
                     <h1>THE DRIVE TO SURVIVE IMPACT</h1>
+                    <div class="line-container-4">
+                        <div class="main-line-4"></div>
+                        <div class="secondary-line-4"></div>
+                        <div class="accent-line-4"></div>
+                    </div>
                     <h4>Drive to Survive's Lasting Impact on Formula 1</h4>
                 </div>
                 <div class="row" id="svg-containerVisual3">
@@ -155,7 +158,10 @@
                             <li><strong>Financial Growth:</strong> F1 team valuations have soared since introduction of DTS, underscoring the financial importance of DTS.</li>
                         </ul>
                     </div>
-                    <div class="col-sm-6" id="valuation-graph"></div>
+                    <div class="col-sm-6" id="valuation-graph">
+                        <div class="hover-instruction">Hover over bars to learn more</div>
+
+                    </div>
 
                 </div>
             </div>
@@ -361,10 +367,10 @@
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
-        navigationPosition: 'right',
+        navigationPosition: 'left',
         // MAKE SURE TO REMOVE THE CODE BELOW !!!!
         afterRender: function () {
-            fullpage_api.moveTo(3); // Moves to the second section
+            fullpage_api.moveTo(5); // Moves to the second section
         }
     });
 </script>
