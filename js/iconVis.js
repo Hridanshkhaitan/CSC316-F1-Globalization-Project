@@ -47,8 +47,8 @@ class IconVis {
 
         //Grid parameters:
         const ncol = 4;
-        const gap = 10;
-        const iconDiameter = 110;
+        const gap = 15;
+        const iconDiameter = 100;
         const radius = iconDiameter / 2;
 
         // Colouring Icons
@@ -74,7 +74,7 @@ class IconVis {
         iconsEnter.merge(icons)
             .transition()
             .duration(1000)
-            .attr("cx", (d, i) => (i % ncol) * (iconDiameter + gap) + radius)
+            .attr("cx", (d, i) => (i % ncol) * (iconDiameter + gap) + radius +40)
             .attr("cy", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius)
             .attr("r", radius)
             .attr("fill", d => vis.colorScale(d[vis.currentSorter]));
@@ -96,7 +96,7 @@ class IconVis {
             .transition()
             .duration(1000)
             // Center the label inside the circle
-            .attr("x", (d, i) => (i % ncol) * (iconDiameter + gap) + radius)
+            .attr("x", (d, i) => (i % ncol) * (iconDiameter + gap) + radius + 40)
             .attr("y", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius + 5);
 
         labels.exit().remove();
@@ -111,7 +111,7 @@ class IconVis {
     showDetails(d) {
         let detailDiv = document.getElementById(this.detailElement);
         detailDiv.innerHTML = `
-        <img src="${d.trackImage}" alt="${d.name} Track" style="max-width:300px; display:block; margin-bottom:10px;">
+        <img src="${d.trackImage}" style="max-width:300px; display:block; margin-bottom:10px;">
         <h2>${d.name}</h2>
         <p><strong>Hosting Fee:</strong> $${d.hostingFee} million</p>
         <p><strong>Ticket Price:</strong> $${d.ticketPrice}</p>

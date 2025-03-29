@@ -18,7 +18,6 @@ function initVisual1(data) {
 
     // Create an instance of IconVis
     myIconVis = new IconVis("icon-place", "popup-place", data);
-    // myIconVis.initVis();
 }
 
 function sortBy(key) {
