@@ -38,14 +38,14 @@
 #visual1 #header h4.italic {
     font-style: italic;
     color: #cccccc;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 1.2rem;
 }
 
 /* UNDERLINE WITH TWO LINES*/
 .line-container-6 {
     position: relative;
-    top: -10px;
+    top: 0;
     left: 270px;
 }
 

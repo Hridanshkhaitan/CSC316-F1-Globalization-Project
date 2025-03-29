@@ -74,7 +74,7 @@ class IconVis {
         iconsEnter.merge(icons)
             .transition()
             .duration(1000)
-            .attr("cx", (d, i) => (i % ncol) * (iconDiameter + gap) + radius +40)
+            .attr("cx", (d, i) => (i % ncol) * (iconDiameter + gap) + radius + 50)
             .attr("cy", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius)
             .attr("r", radius)
             .attr("fill", d => vis.colorScale(d[vis.currentSorter]));
@@ -96,7 +96,7 @@ class IconVis {
             .transition()
             .duration(1000)
             // Center the label inside the circle
-            .attr("x", (d, i) => (i % ncol) * (iconDiameter + gap) + radius + 40)
+            .attr("x", (d, i) => (i % ncol) * (iconDiameter + gap) + radius + 50)
             .attr("y", (d, i) => Math.floor(i / ncol) * (iconDiameter + gap) + radius + 5);
 
         labels.exit().remove();
