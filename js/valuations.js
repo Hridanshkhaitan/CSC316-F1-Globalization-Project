@@ -18,8 +18,6 @@ class Valuations {
             vis.margin.right;
         vis.height = 600;
 
-        console.log(vis.parentElement, "HELLO");
-
         // Create SVG drawing area
         vis.svg = d3
             .select("#" + vis.parentElement)

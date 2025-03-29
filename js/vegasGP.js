@@ -14,8 +14,6 @@ function start() {
         d["Revenue (in million $)"] = +d["Revenue (in million $)"] / 10;
     });
 
-    console.log("CSV Loaded:", data);
-
     const VERTICAL_SHIFT = -210;
 
     const margin = { top: 50, right: 50, bottom: 50, left: 50 };
@@ -29,16 +27,12 @@ function start() {
     const width = window.innerWidth - margin.left - margin.right;
     let height = window.innerHeight * 2; 
 
-    console.log("SVG Container Dimensions:", width, height);
-
     const svg = d3.select("#chart")
         .append("svg")
         .attr("width", width)
         .attr("height", height)
         .style("display", "block")
         .style("margin", "auto");
-
-    console.log("SVG Element:", svg.node());
 
     const sizeScale = d3.scaleSqrt()
         .domain([0, d3.max(data, d => d["Revenue (in million $)"])])
@@ -159,8 +153,6 @@ function start() {
 }
 
 document.getElementById("toggleChart").addEventListener("click", function () {
-    console.log("HEUBFIABOFUNEAOFNOAENFOUENFOANF");
-    console.log(Circ);
 
     if (!Circ) {
         Circ = true;

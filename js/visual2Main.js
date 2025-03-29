@@ -14,7 +14,6 @@ d3.csv("data/DTS_Impact.csv")
     })
 
 function initVisual2(data1) {
-    console.log("Data loaded:", data1);
 
     // Create instances
     keyMarkets = new KeyMarkets("key-markets", data1);

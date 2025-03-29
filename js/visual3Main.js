@@ -19,7 +19,6 @@ d3.csv("data/valuations.csv")
     })
 
 function initVisual3(data) {
-    console.log("Data loaded:", data);
 
     // Create instances
     valuations = new Valuations("valuation-graph", data);

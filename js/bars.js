@@ -1,10 +1,6 @@
 function showBarChart(data) {
-    console.log("triggered", data);
 
     const svg = d3.select("#chart svg");
-    console.log("-------------");
-    console.log(svg);
-    console.log("-------------");
     const width = +svg.attr("width");
     const height = +svg.attr("height");
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
@@ -35,7 +31,6 @@ function showBarChart(data) {
         .call(yAxis)
         .selectAll("text")
         .style("font-size", "12px");
-    console.log("this far");
 
 
     svg.selectAll("text:not(.y-axis text)")

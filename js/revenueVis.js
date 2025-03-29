@@ -1,9 +1,7 @@
 class RevenueVis {
     constructor(parentElement, data) {
-      console.log("start up");
       this.parentElement = parentElement;
       this.data = data;
-      console.log(data);
       this.initVis();
     }
   
@@ -53,8 +51,6 @@ class RevenueVis {
   
     wrangleData() {
       let vis = this;
-  
-      console.log("Raw keys:", Object.keys(vis.data[0]));
 
 
       vis.displayData = vis.data
@@ -72,9 +68,6 @@ class RevenueVis {
   
       const xExtent = d3.extent(vis.displayData, d => d.year);
       const yMax = d3.max(vis.displayData, d => d.revenue);
-  
-      console.log(vis.displayData);
-
 
       vis.xScale.domain(xExtent);
       vis.yScale.domain([0, yMax]);
