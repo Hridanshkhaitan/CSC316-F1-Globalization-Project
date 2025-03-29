@@ -265,23 +265,18 @@
     </div>
 
     <div class="section" id="section10">
-        <label style="display: block; text-align: center; margin-bottom: 10px;">
-            <input type="checkbox" id="toggle-scale" />
-            Log Scale
-        </label>
-          
-        <label style="display: block; text-align: center;">
-            <input type="checkbox" id="toggle-color" />
-            Color by Continent
-        </label>
-          
-
-
-        <section class="container" id="visual5">
-
-        </section>
-
-        <div id="legend-container" style="text-align:center; margin-top: 15px;"></div>
+        <div class="vis-block" id="eco-impact-block">
+          <h3 style="text-align: center;">Estimated Economic Impact of Formula 1 Races by Country</h3>
+    
+          <div class="centered-controls">
+            <label><input type="checkbox" id="toggle-scale" /> Log Scale</label>
+            &nbsp;&nbsp;
+            <label><input type="checkbox" id="toggle-color" /> Color by Continent</label>
+          </div>
+    
+          <section class="container" id="visual5"></section>
+    
+          <div id="legend-container" style="text-align:center; margin-top: 15px;"></div>
 
         <div style="text-align: center; margin-top: 10px;">
             <span id="info-button" style="
@@ -316,16 +311,14 @@
           ">
             Notice the success of races outside of Europe!
           </div>
-          
-
-          
-             
-    </div>
-    <div class="section" id="section11">
-        <section class="container" id="visual6">
-        </section>
-
-        <div id="revenue-info-message" style="
+        </div>
+    
+        <div class="vis-block" id="revenue-block">
+          <h3 style="text-align: center;">Tracking Formula 1’s Revenue Growth Through Disruptions and Expansions</h3>
+    
+          <section class="container" id="visual6"></section>
+    
+          <div id="revenue-info-message" style="
             visibility: hidden;
             opacity: 0;
             transition: opacity 0.3s ease;
@@ -342,6 +335,8 @@
             ">
             The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
         </div>
+
+    </div>
           
         
           
