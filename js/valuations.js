@@ -56,12 +56,12 @@ class Valuations {
 
         function getColor(measure, year) {
             // Valuation bars
-            if (measure === "valuation" && year === "2019") return "#3498db"; // Blue
-            if (measure === "valuation" && year === "2023") return "#2980b9"; // Darker Blue
+            if (measure === "valuation" && year === "2019") return "#3498db";
+            if (measure === "valuation" && year === "2023") return "#2980b9";
 
             // Revenue bars
-            if (measure === "revenue" && year === "2019") return "#e74c3c"; // Red
-            if (measure === "revenue" && year === "2023") return "#CD2D1E"; // Darker Red
+            if (measure === "revenue" && year === "2019") return "#e74c3c";
+            if (measure === "revenue" && year === "2023") return "#CD2D1E";
         }
 
         const measures = ["valuation", "revenue"];
@@ -107,7 +107,7 @@ class Valuations {
                     .attr("x", -14)
                     .attr("y", 22);
 
-                // Circle background
+                // Rectangle background
                 iconGroup.append("rect")
                     .attr("width", 26)
                     .attr("height", 26)
