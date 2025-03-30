@@ -122,8 +122,8 @@ class FanMap {
                 const countryData = vis.dataByCountry[countryName];
             
                 if (!countryData) {
-                    console.log("No match in CSV for:", countryName);
-                    return "white";
+                    // console.log("No match in CSV for:", countryName);
+                    return "grey";
                 }
             
                 const value = countryData[vis.selectedYear];
