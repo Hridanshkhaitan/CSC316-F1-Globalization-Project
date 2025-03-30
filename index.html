@@ -362,7 +362,40 @@
             </ol>
         </section>
     </div>
+
+    <div class="section" id="section14">
+        <div style="display: flex; justify-content: center;">
+      
+          <div style="display: flex; align-items: flex-start;">
+      
+            <section class="container" id="visual10"></section>
+      
+            <div style="margin-left: 40px; margin-top: 80px;">
+              <div style="margin-bottom: 20px;">
+                <input type="range" id="yearSlider" min="0" max="3" step="1" value="0" list="yearTicks">
+                <datalist id="yearTicks">
+                  <option value="0" label="2005"></option>
+                  <option value="1" label="2010"></option>
+                  <option value="2" label="2015"></option>
+                  <option value="3" label="2021"></option>
+                </datalist>
+                <span id="yearLabel">2005</span>
+              </div>
+      
+              <div id="legendContainer"></div>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
 </div>
+
 <!-- JS libraries -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -387,7 +420,10 @@
 
 <script src="js/revenueSetUp.js"></script>
 <script src="js/revenueVis.js"></script>
-<script src="js/vegasImpactSB.js"></script>
+
+<script src="js/mapSetUp.js"></script>
+<script src="js/fanMap.js"></script>
+
 <script>
     new fullpage('#fullpage', {
         autoScrolling: true,
