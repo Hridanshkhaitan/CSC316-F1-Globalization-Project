@@ -31,10 +31,10 @@ class EconomicImpactChart {
         let vis = this;
 
         // Define margins
-        vis.margin = { top: 40, right: 120, bottom: 60, left: 180 };
+        vis.margin = { top: 40, right: 120, bottom: 60, left: 120 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width -
             vis.margin.left - vis.margin.right;
-        vis.height = 300;
+        vis.height = 400;
 
         // Create SVG drawing area
         vis.svg = d3
@@ -45,18 +45,6 @@ class EconomicImpactChart {
             .append("g")
             .attr("transform", `translate(${vis.margin.left}, ${vis.margin.top})`);
 
-        // Create a tooltip
-        vis.tooltip = d3.select("body")
-            .append("div")
-            .attr("class", "tooltip-economic-impact");
-
-        // Add title
-        vis.svg.append("text")
-            .attr("x", vis.width / 2)
-            .attr("y", -15)
-            .attr("text-anchor", "middle")
-            .attr("class", "chart-title")
-            .text("ECONOMIC IMPACT COMPARISON");
 
         // Initialize axes
         vis.xAxis = vis.svg.append("g")
@@ -106,6 +94,10 @@ class EconomicImpactChart {
 
         vis.yAxis.call(d3.axisLeft(vis.y));
 
+        vis.svg.selectAll(".y-axis text")
+            .style("font-size", "14px")
+            .style("fill", "white");
+
         // Select all bars
         let bars = vis.svg.selectAll(".impact-bar")
             .data(vis.displayData);
@@ -146,25 +138,6 @@ class EconomicImpactChart {
 
         // Remove
         valueLabels.exit().remove();
-        //
-        // // Add tooltip interaction
-        // bars
-        //     .on("mouseover", function(event, d) {
-        //         d3.select(this).attr("opacity", 0.8);
-        //
-        //         vis.tooltip
-        //             .style("opacity", 1)
-        //             .style("left", (event.pageX + 10) + "px")
-        //             .style("top", (event.pageY - 25) + "px")
-        //             .html(`
-        //                 <div><strong>${d.event}</strong></div>
-        //                 <div>Economic Impact: $${d.value}B</div>
-        //                 <div>${d.year}</div>
-        //             `);
-        //     })
-        //     .on("mouseout", function() {
-        //         d3.select(this).attr("opacity", 1);
-        //         vis.tooltip.style("opacity", 0);
-        //     });
+
     }
 }

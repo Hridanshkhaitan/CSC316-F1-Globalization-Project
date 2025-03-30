@@ -1,7 +1,7 @@
 /* SECTION 12: NEGATIVES INTRO*/
 
 /* Background*/
-#section12 {
+#section9 {
     background-image: url('../img/negativesIntro.jpeg');
     background-size: cover;
     color: white;
@@ -9,7 +9,7 @@
 }
 
 /* Dark overlay to increase contrast */
-#section12::before {
+#section9::before {
     content: "";
     position: absolute;
     inset: 0;

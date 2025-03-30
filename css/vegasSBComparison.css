@@ -1,7 +1,7 @@
 /* SECTION 9: VEGAS SB COMPARISON */
 
 /* Background*/
-#section9 {
+#section8 {
     background-image: url('../img/vegasSBComparison.jpg');
     background-size: cover;
     color: white;
@@ -9,15 +9,15 @@
 }
 
 /* Dark overlay to increase contrast */
-#section9::before {
+#section8::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 0;
 }
 
-#section9 .container {
+#section8 .container {
     position: relative;
     z-index: 2;
 }
@@ -40,18 +40,94 @@
     display: none;
 }
 
-/*!* Tooltip Styles *!*/
-/*#visualSBComparison .tooltip-economic-impact {*/
-/*    position: absolute;*/
-/*    text-align: left;*/
-/*    padding: 8px;*/
-/*    font: 12px sans-serif;*/
-/*    background: rgba(0, 0, 0, 0.8);*/
-/*    color: white;*/
-/*    border: 0;*/
-/*    border-radius: 4px;*/
-/*    pointer-events: none;*/
-/*    opacity: 0;*/
-/*    transition: opacity 0.3s;*/
-/*    z-index: 1000;*/
-/*}*/
+/* HEADER */
+#visualSBComparison #headerVisualSBComparison {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#visualSBComparison #headerVisualSBComparison h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+}
+
+#visualSBComparison #headerVisualSBComparison h4 {
+    color: #cccccc;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+/* UNDERLINE WITH TWO LINES*/
+.line-container-9 {
+    position: relative;
+    top: 0;
+    left: 400px;
+}
+
+.main-line-9 {
+    width: 450px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+}
+
+.secondary-line-9 {
+    width: 443px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    margin-top: 3px;
+}
+
+.accent-line-9 {
+    position: absolute;
+    width: 10px;
+    height: 23px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    left: 461px;
+    top: 0;
+}
+
+#economicImpactSB {
+    height: 600px;
+    margin-top: 100px;
+}
+
+#economicImpactSB .chart-title {
+    font-size: 20px;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    z-index: 100;
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #555;
+}
+
+#economicBreakdown .y-axis line {
+    stroke: #444;
+    stroke-dasharray: 2,2;
+}
+
+.chart-header {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px; /* Adjust as needed */
+}

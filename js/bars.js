@@ -1,83 +1,105 @@
 function showBarChart(data) {
+    console.log("triggered", data);
 
-    const svg = d3.select("#chart svg");
-    const width = +svg.attr("width");
-    const height = +svg.attr("height");
+    const margin = { top: 50, right: 20, bottom: 100, left: 60 };
+    const container = document.getElementById("economicBreakdown");
+    const containerRect = container.getBoundingClientRect();
+
+
+    const width = containerRect.width - margin.left - margin.right;
+    const height = 800;
     const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
+    // Clear previous content
+    d3.select("#economicBreakdown").selectAll("svg").remove();
+    d3.select("#economicBreakdown").selectAll(".gp-tooltip").remove();
 
-    const margin = { left: 100, right: 100, bottom: 50, top: 50 }; 
+
+    const svg = d3.select("#economicBreakdown")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height)
+        .style("display", "block")
+        .style("margin", "auto");
+
+    // Create tooltip
+    const tooltip = d3.select("#economicBreakdown")
+        .append("div")
+        .attr("class", "gp-tooltip")
+        .style("position", "absolute")
+        .style("opacity", 0)
+        .style("background", "rgba(0, 0, 0, 0.8)")
+        .style("color", "white")
+        .style("padding", "8px")
+        .style("border-radius", "4px")
+        .style("pointer-events", "none")
+        .style("z-index", 1000);
 
     const xScale = d3.scaleBand()
         .domain(data.map(d => d.Sector))
-        .range([margin.left + 100, width - margin.right - 100])
+        .range([margin.left, width + margin.left])
         .padding(0.2);
 
-
     const yScale = d3.scaleLog()
-        .domain([Math.max(0.1, d3.min(data, d => d["Revenue (in million $)"])), d3.max(data, d => d["Revenue (in million $)"])])
+        .domain([
+            Math.max(0.1, d3.min(data, d => d["Revenue (in million $)"])),
+            d3.max(data, d => d["Revenue (in million $)"])
+        ])
         .range([height - 100, 100]);
 
     const yAxis = d3.axisLeft(yScale)
-        .tickValues([1, 10, 100, 1000, 10000, 100000]) 
+        .tickValues([1, 10, 100, 1000])
         .tickFormat(d3.format("~s"))
-        .tickSize(0);
-    
+        .tickSize(-width);
+
 // make axis
-    svg.selectAll(".y-axis").remove();
     svg.append("g")
         .attr("class", "y-axis")
-        .attr("transform", `translate(${margin.left + 80},0)`)
+        .attr("transform", `translate(${margin.left},0)`)
         .call(yAxis)
-        .selectAll("text")
-        .style("font-size", "12px");
+        .call(g => g.selectAll(".tick line")
+            .attr("stroke", "#444")
+            .attr("stroke-dasharray", "2,2"))
+        .call(g => g.selectAll("text")
+            .attr("fill", "#ccc")
+            .style("font-size", "12px"))
+        .call(g => g.select(".domain").remove());
 
 
-    svg.selectAll("text:not(.y-axis text)")
-        .transition()
-        .duration(500)
-        .style("opacity", 0)
-        .remove();
 
-    // Transition circles into bars
-    svg.selectAll("circle")
-        .transition()
-        .duration(1000)
-        .attr("cx", d => xScale(d.Sector) + xScale.bandwidth() / 2)
-        .attr("cy", d => yScale(d["Revenue (in million $)"]))
-        .attr("r", 0)
-        .remove();
-
-    svg.selectAll("rect")
+    // Create bars
+    svg.selectAll(".bar")
         .data(data)
         .enter()
         .append("rect")
+        .attr("class", "bar")
         .attr("x", d => xScale(d.Sector))
-        .attr("y", height - 100)
-        .attr("width", xScale.bandwidth() * 0.6)
+        .attr("y", height - margin.bottom)
+        .attr("width", xScale.bandwidth())
         .attr("height", 0)
         .attr("fill", d => colorScale(d.Sector))
+        .on("mouseover", function(event, d) {
+            tooltip
+                .style("opacity", 1)
+                .html(`
+                    <strong>${d.Sector}</strong><br>
+                    Revenue: $${d["Impact (in million $)"]}M
+                `);
+            d3.select(this).attr("opacity", 0.8);
+        })
+        .on("mousemove", function(event) {
+            tooltip
+                .style("left", (event.pageX -410) + "px")
+                .style("top", (event.pageY - 20) + "px");
+        })
+        .on("mouseout", function() {
+            tooltip.style("opacity", 0);
+            d3.select(this).attr("opacity", 1);
+        })
         .transition()
         .duration(1000)
-        .attr("y", d => yScale(d["Revenue (in million $)"])) 
-        .attr("height", d => Math.max(5, height - 100 - yScale(d["Revenue (in million $)"]))); 
-
-
-    const lastRevenue = data[data.length - 1]["Revenue (in million $)"];
-    const lastBarHeight = Math.max(5, height - 100 - yScale(lastRevenue));
-    const lastBarY = yScale(lastRevenue); 
-
-// Fill in empty space that is caused by log(0.3)<0
-    svg.selectAll(".duplicate-bar")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("class", "duplicate-bar")
-        .attr("x", d => xScale(d.Sector))
-        .attr("y", lastBarY) 
-        .attr("width", xScale.bandwidth() * 0.6)
-        .attr("height", lastBarHeight)
-        .attr("fill", d => colorScale(d.Sector)); 
+        .attr("y", d => yScale(Math.max(0.1, d["Revenue (in million $)"])))
+        .attr("height", d => height - margin.bottom - yScale(Math.max(0.1, d["Revenue (in million $)"])));
 
 // Labels
     svg.selectAll(".bar-label")
@@ -86,39 +108,31 @@ function showBarChart(data) {
         .append("text")
         .attr("class", "bar-label")
         .attr("x", d => xScale(d.Sector) + xScale.bandwidth() / 2)
-        .attr("y", height - 105)
+        .attr("y", d => yScale(Math.max(0.1, d["Revenue (in million $)"])) - 5)
         .attr("text-anchor", "middle")
         .style("font-size", "12px")
-        .text(d => `$${d["Revenue (in million $)"]}M`)
-        .transition()
-        .duration(1000)
-        .attr("y", d => Math.max(20, yScale(d["Revenue (in million $)"]) - 5));
+        .style("fill", "#ccc")
+
+        .text(d => `$${d["Revenue (in million $)"]}M`);
 
 
 // x axis
     const xAxis = d3.axisBottom(xScale);
 
-
-    svg.selectAll(".x-axis").remove();
     svg.append("g")
         .attr("class", "x-axis")
-        .attr("transform", `translate(${margin.left - 120}, ${height - 95})`) 
-        .call(xAxis)
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(xScale))
         .selectAll("text")
-        .style("font-size", "12px")
-        .style("text-anchor", "end") 
-        .attr("transform", "rotate(-10)")
-        .attr("dx", "60px") 
-        .attr("dy", "10px");
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-45)")
+        .style("fill", "#ccc")
+        .style("font-size", "10px");
 }
 
-
-function clearBarChart() {
-    const svg = d3.select("#chart svg");
-
-    svg.selectAll("rect").remove();                
-    svg.selectAll(".bar-label").remove();            
-    svg.selectAll(".x-axis").remove();             
-    svg.selectAll(".y-axis").remove();              
-    svg.selectAll("text:not(.y-axis text)").remove(); 
+function clearBarChartView() {
+    d3.select("#economicBreakdown").selectAll("svg").remove();
+    d3.select("#economicBreakdown").selectAll(".gp-tooltip").remove();
 }
