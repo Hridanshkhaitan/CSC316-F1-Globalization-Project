@@ -83,7 +83,7 @@ function showBarChart(data) {
                 .style("opacity", 1)
                 .html(`
                     <strong>${d.Sector}</strong><br>
-                    Revenue: $${d["Impact (in million $)"]}M
+                    Impact: $${d["Revenue (in million $)"]}M
                 `);
             d3.select(this).attr("opacity", 0.8);
         })

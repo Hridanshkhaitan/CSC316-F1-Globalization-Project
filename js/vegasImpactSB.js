@@ -30,6 +30,7 @@ class EconomicImpactChart {
     initVis() {
         let vis = this;
 
+        console.log("HELLO")
         // Define margins
         vis.margin = { top: 40, right: 120, bottom: 60, left: 120 };
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width -
