@@ -146,25 +146,25 @@ class EconomicImpactChart {
 
         // Remove
         valueLabels.exit().remove();
-
-    //     // Add tooltip interaction
-    //     bars
-    //         .on("mouseover", function(event, d) {
-    //             d3.select(this).attr("opacity", 0.8);
-    //
-    //             vis.tooltip
-    //                 .style("opacity", 1)
-    //                 .style("left", (event.pageX + 10) + "px")
-    //                 .style("top", (event.pageY - 25) + "px")
-    //                 .html(`
-    //                     <div><strong>${d.event}</strong></div>
-    //                     <div>Economic Impact: $${d.value}B</div>
-    //                     <div>${d.year}</div>
-    //                 `);
-    //         })
-    //         .on("mouseout", function() {
-    //             d3.select(this).attr("opacity", 1);
-    //             vis.tooltip.style("opacity", 0);
-    //         });
+        //
+        // // Add tooltip interaction
+        // bars
+        //     .on("mouseover", function(event, d) {
+        //         d3.select(this).attr("opacity", 0.8);
+        //
+        //         vis.tooltip
+        //             .style("opacity", 1)
+        //             .style("left", (event.pageX + 10) + "px")
+        //             .style("top", (event.pageY - 25) + "px")
+        //             .html(`
+        //                 <div><strong>${d.event}</strong></div>
+        //                 <div>Economic Impact: $${d.value}B</div>
+        //                 <div>${d.year}</div>
+        //             `);
+        //     })
+        //     .on("mouseout", function() {
+        //         d3.select(this).attr("opacity", 1);
+        //         vis.tooltip.style("opacity", 0);
+        //     });
     }
 }
