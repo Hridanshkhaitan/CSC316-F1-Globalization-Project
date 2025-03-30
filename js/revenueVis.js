@@ -80,6 +80,15 @@ class RevenueVis {
       vis.svg.select(".x-axis").transition().duration(500).call(vis.xAxis);
       vis.svg.select(".y-axis").transition().duration(500).call(vis.yAxis);
   
+      vis.svg.selectAll(".x-axis path, .x-axis line, .y-axis path, .y-axis line")
+        .attr("stroke", "white")
+        .attr("stroke-width", 2);
+    
+      vis.svg.selectAll(".x-axis text, .y-axis text")
+        .attr("fill", "white")
+        .attr("font-size", "16px");
+    
+
       const line = d3.line()
         .x(d => vis.xScale(d.year))
         .y(d => vis.yScale(d.revenue));
@@ -95,7 +104,7 @@ class RevenueVis {
         .attr("d", line)
         .attr("fill", "none")
         .attr("stroke", "red")
-        .attr("stroke-width", 2);
+        .attr("stroke-width", 4);
 
     
     vis.svg.append("line")
@@ -103,14 +112,15 @@ class RevenueVis {
       .attr("x2", vis.xScale(2019.5))
       .attr("y1", vis.yScale(0) - 30)       
       .attr("y2", vis.yScale(1400))    
-      .attr("stroke", "black")
+      .attr("stroke", "white")
       .attr("stroke-dasharray", "3,3");
 
     vis.svg.append("text")
       .attr("x", vis.xScale(2019.5))
       .attr("y", vis.yScale(0) - 15)
       .attr("text-anchor", "middle")
-      .attr("font-size", "11px")
+      .attr("font-size", "13px")
+      .style("fill", "white")
       .text("COVID-19 Pandemic");
 
     vis.svg.append("line")
@@ -118,14 +128,15 @@ class RevenueVis {
       .attr("x2", vis.xScale(2022.5))
       .attr("y1", vis.yScale(3600))         
       .attr("y2", vis.yScale(3200))     
-      .attr("stroke", "black")
+      .attr("stroke", "white")
       .attr("stroke-dasharray", "3,3");
 
     vis.svg.append("text")
       .attr("x", vis.xScale(2022.5))
       .attr("y", vis.yScale(3600) - 6)
       .attr("text-anchor", "middle")
-      .attr("font-size", "11px")
+      .attr("font-size", "13px")
+      .style("fill", "white")
       .text("Reintroduction of Las Vegas GP");
 
     vis.svg.selectAll("#revenue-info-button").remove();

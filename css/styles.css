@@ -127,7 +127,7 @@ body {
 }
 
 #visual6 {
-  height: 300px;
+  height: 250px;
   width: 100%;
 }
 
@@ -141,3 +141,44 @@ body {
   background: #ff3333 !important;
 }
 
+
+.title-divider1 {
+  width: 55%;
+  height: 4px;
+  background-color: #CD2D1E;
+  margin: 0 auto 30px auto;
+}
+
+.title-divider2 {
+  width: 65%;
+  height: 4px;
+  background-color: #CD2D1E;
+  margin: 0 auto 30px auto;
+}
+
+/* Background*/
+#section10 {
+  background-image: url('../img/bgVegasGraphs.avif');
+  background-size: cover;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Dark overlay to increase contrast */
+#section10::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#section10 .container{
+  position: relative;
+  z-index: 2;
+  color: white;
+}

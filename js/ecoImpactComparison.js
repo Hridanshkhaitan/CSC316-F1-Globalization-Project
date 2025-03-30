@@ -66,7 +66,7 @@ class EcoVis {
             .attr("orient", "auto")
             .append("path")
             .attr("d", "M0,-5L10,0L0,5")
-            .attr("fill", "black");
+            .attr("fill", "white");
 
         vis.svg.append("line")
             .attr("class", "x-axis-arrow")
@@ -74,7 +74,7 @@ class EcoVis {
             .attr("x2", vis.width)
             .attr("y1", vis.height / 2)
             .attr("y2", vis.height / 2)
-            .attr("stroke", "black")
+            .attr("stroke", "white")
             .attr("stroke-width", 1.5)
             .attr("marker-end", "url(#arrowhead)");
 
@@ -83,7 +83,8 @@ class EcoVis {
             .attr("x", vis.width)
             .attr("y", vis.height / 2 + 40)
             .attr("text-anchor", "end")
-            .style("font-size", "12px")
+            .style("font-size", "16px")
+            .attr("fill", "white")
             .text("Estimated Economic Impact ($M)");
           
 
@@ -130,6 +131,10 @@ class EcoVis {
           .transition()
           .duration(500)
           .call(vis.xAxis);
+
+        vis.svg.selectAll(".x-axis text, .y-axis text")
+          .attr("fill", "white")
+          .attr("font-size", "16px");
       
         // Data binding
         const circles = vis.svg.selectAll(".race-circle")

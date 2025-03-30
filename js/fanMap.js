@@ -123,7 +123,7 @@ class FanMap {
             
                 if (!countryData) {
                     console.log("No match in CSV for:", countryName);
-                    return "white";
+                    return "grey";
                 }
             
                 const value = countryData[vis.selectedYear];
