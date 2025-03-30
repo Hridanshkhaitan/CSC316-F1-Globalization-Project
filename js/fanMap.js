@@ -43,7 +43,54 @@ class FanMap {
             .domain([0, 8, 15, 100])
             .range(["blue", "green", "yellow", "red"]);
 
-            
+
+    const legendWidth = 40;
+    const legendHeight = 200;
+
+    const legendSvg = d3.select("#legendContainer")
+        .append("svg")
+        .attr("width", legendWidth + 50)
+        .attr("height", legendHeight + 30);
+
+    const defs = legendSvg.append("defs");
+    const gradient = defs.append("linearGradient")
+        .attr("id", "legendGradient")
+        .attr("x1", "0%")
+        .attr("y1", "100%")
+        .attr("x2", "0%")
+        .attr("y2", "0%");
+
+    gradient.selectAll("stop")
+        .data([
+            { offset: "0%", color: "blue" },
+            { offset: "8%", color: "green" },
+            { offset: "15%", color: "yellow" },
+            { offset: "100%", color: "red" }
+        ])
+        .enter()
+        .append("stop")
+        .attr("offset", d => d.offset)
+        .attr("stop-color", d => d.color);
+
+    legendSvg.append("rect")
+        .attr("x", 10)
+        .attr("y", 10)
+        .attr("width", legendWidth)
+        .attr("height", legendHeight)
+        .style("fill", "url(#legendGradient)");
+
+    const legendScale = d3.scaleLinear()
+        .domain([0, 100])
+        .range([legendHeight, 0]);
+
+    const legendAxis = d3.axisRight(legendScale)
+        .tickValues([0, 8, 15, 100])
+        .tickFormat(d => d + "%");
+
+    legendSvg.append("g")
+        .attr("transform", `translate(${10 + legendWidth}, 10)`)
+        .call(legendAxis);
+
             
         vis.wrangleData();
             

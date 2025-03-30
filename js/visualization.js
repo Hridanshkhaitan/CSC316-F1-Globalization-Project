@@ -113,7 +113,7 @@ fetch('data/RaceCircuitMonaco.svg')
             activeDriver = driver;
             driver.circle.attr("r", 8);
             driverInfo.html(`
-              <img src="data/${driverImages[driver["DRIVER"]]}" alt="${driver["DRIVER"]}" style="width:100%; margin-bottom:10px;">
+              <img src="data/driverImages/${driverImages[driver["DRIVER"]]}" alt="${driver["DRIVER"]}" style="width:100%; margin-bottom:10px;">
               <div class="driver-name">${driver["DRIVER"]}</div>
               <div class="driver-speed">Avg Speed: ${driver.avgSpeed} km/h</div>
               <button id='hide-driver'>Hide Driver</button>

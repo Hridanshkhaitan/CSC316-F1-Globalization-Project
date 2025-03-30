@@ -13,7 +13,7 @@ Promise.all([
         return entry; 
     });
     
-    const fanMap = new FanMap("#visual7", data, geoData);
+    const fanMap = new FanMap("#visual10", data, geoData);
 
     const yearOptions = ["2005", "2010", "2015", "2021"];
 
