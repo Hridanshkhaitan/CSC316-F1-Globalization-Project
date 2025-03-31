@@ -9,4 +9,11 @@
 
 #section14 h1 {
     color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 20px;
+}
+#section14 li{
+    color: white;
 }
