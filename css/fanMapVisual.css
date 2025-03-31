@@ -1,24 +1,24 @@
 /* SECTION 14: FAN MAP */
 
 /* Background*/
-#section14 {
-    background-image: url('../img/dtsEffectBackground.jpeg');
+#section11 {
+    background-image: url('../img/fanBackground.jpeg');
     background-size: cover;
     color: white;
     position: relative;
 }
 
 /* Dark overlay to increase contrast */
-#section14::before {
+#section11::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
 
-#section14 .container {
+#section11 .container {
     position: relative;
     z-index: 2;
 }
@@ -38,7 +38,7 @@
 
 #headerFanMap h4 {
     font-size: 1.2rem;
-    color: #cccccc;
+    /*color: #cccccc;*/
     margin-top: 15px;
     font-weight: normal;
 }
@@ -47,18 +47,18 @@
 .line-container-14 {
     position: relative;
     top: 0;
-    left: 270px;
+    left: 140px;
 }
 
 .main-line-14 {
-    width: 724px;
+    width: 1004px;
     height: 10px;
     background-color: #CD2D1E;
     transform: skewX(-30deg);
 }
 
 .secondary-line-14 {
-    width: 717px;
+    width: 997px;
     height: 10px;
     background-color: #CD2D1E;
     transform: skewX(-30deg);
@@ -71,7 +71,7 @@
     height: 23px;
     background-color: #CD2D1E;
     transform: skewX(-30deg);
-    right: 526px;
+    right: 270px;
     top: 0;
 }
 
@@ -117,6 +117,7 @@
     background-color: rgba(35, 35, 35, 0.5);
     padding: 20px;
     border-radius: 8px;
+    text-align: justify;
 }
 
 .key-stats h3 {
@@ -149,27 +150,15 @@
 
 /* Intro text styling */
 .intro-text {
-    max-width: 800px;
-    margin: 30px auto 0;
+    background-color: rgba(10, 16, 23, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    padding: 20px 30px;
     text-align: center;
-    color: #a8a8a8;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Tooltip styling */
-.tooltip {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    /*font-size: 1.2rem;*/
     color: white;
-    padding: 10px;
-    border-radius: 5px;
-    pointer-events: none;
-    font-size: 14px;
-    z-index: 1000;
-    max-width: 200px;
+    font-size: 25px;
 }
-
 
 path:hover {
     cursor: pointer;
