@@ -92,6 +92,12 @@ class FanMap {
         .selectAll("text")
         .attr("fill", "white");
 
+    vis.tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip-visual3")
+        .style("display", "none");
+    
+
             
         vis.wrangleData();
             
@@ -136,6 +142,37 @@ class FanMap {
             
                 return vis.colorScale(value);
             });
+
+            vis.svg.selectAll("path")
+            .on("mouseover", function (event, d) {
+                const countryName = d.properties.name;
+                const countryData = vis.dataByCountry[countryName];
+        
+                let content = `<strong>${countryName}</strong><br/>`;
+        
+                if (!countryData) {
+                    content += "Data not available";
+                } else {
+                    const years = Object.keys(countryData).filter(k => k !== "country");
+                    years.forEach(year => {
+                        const val = countryData[year];
+                        content += `${year}: ${val != null ? val + "%" : "NA"}<br/>`;
+                    });
+                }
+        
+                vis.tooltip
+                    .html(content)
+                    .style("display", "block");
+            })
+            .on("mousemove", function (event) {
+                vis.tooltip
+                    .style("left", event.pageX + 10 + "px")
+                    .style("top", event.pageY + 10 + "px");
+            })
+            .on("mouseout", function () {
+                vis.tooltip.style("display", "none");
+            });
+        
             
     }
     
