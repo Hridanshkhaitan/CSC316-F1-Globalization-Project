@@ -153,14 +153,14 @@ class RevenueVis {
     vis.svg.append("circle")
       .attr("cx", infoX)
       .attr("cy", infoY)
-      .attr("r", 10)
+      .attr("r", 12)
       .attr("fill", "white");
 
     vis.svg.append("circle")
       .attr("id", "revenue-info-button")
       .attr("cx", infoX)
       .attr("cy", infoY)
-      .attr("r", 8)
+      .attr("r", 10)
       .attr("fill", "#e63946")
       .attr("cursor", "pointer");
 
