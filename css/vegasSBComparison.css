@@ -43,7 +43,7 @@
 /* HEADER */
 #visualSBComparison #headerVisualSBComparison {
     text-align: center;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
 #visualSBComparison #headerVisualSBComparison h1 {
@@ -54,9 +54,10 @@
 }
 
 #visualSBComparison #headerVisualSBComparison h4 {
-    color: #cccccc;
+    color: white;
     margin-top: 15px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 /* UNDERLINE WITH TWO LINES*/
@@ -128,6 +129,7 @@
     font-weight: bold;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 40px; /* Adjust as needed */
+    margin-bottom: 0;
+    margin-top: 10px;
 }
+
