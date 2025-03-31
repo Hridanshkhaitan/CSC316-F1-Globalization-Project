@@ -92,20 +92,20 @@ function wrangleData() {
 
           const titles = ["Terrence Allder", "David Atanasov", "Hridansh Khaitan"];
           const subtitles = [
-            "Math Specialist + CS minor",
+            "Math Specialist + CS Minor",
             "Whatever you study",
-            "Whatever you study"
+            "Economics Major + CS/Stats Minor"
           ];
           
           const labelTitle = trackGroup.append("text")
             .text(titles[index])
-            .attr("font-size", "18px")
+            .attr("font-size", "16px")
             .attr("fill", "white")
             .attr("font-weight", "bold");
           
           const labelSubtitle = trackGroup.append("text")
             .text(subtitles[index])
-            .attr("font-size", "14px")
+            .attr("font-size", "12px")
             .attr("fill", "#DDDDDD");
           
           return { ...driver, avgSpeed, startOffset, circle, line, labelTitle, labelSubtitle };
