@@ -35,13 +35,6 @@ function initVis() {
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-  d3.select("#monaco-viz")
-    .append("button")
-    .attr("id", "add-drivers")
-    .text("Show all Drivers")
-    .on("click", () => {
-      data.forEach(driver => driver.circle.transition().duration(300).style("opacity", 1));
-    });
 
   fetchTrack();
 }
