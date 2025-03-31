@@ -2,17 +2,6 @@
 /*}*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
-#monaco-viz {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 100px 0;
-  background-color: #c3c1c1e6;
-  border-radius: 20px;
-  overflow: hidden;
-  min-height: 700px;
-}
 
 #driver-info {
   position: absolute;
@@ -164,6 +153,31 @@ body {
   position: relative;
   z-index: 1;
 }
+
+#section17 {
+  background-image: url('../img/pitStop.jpg');
+  background-size: cover;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+
+#section17 #main-title {
+  position: absolute;
+  top: 42%;
+  left: 20%;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 400;
+  z-index: 2;
+  line-height: 1.3;
+}
+
+#section17 #main-title strong {
+  font-weight: bold;
+}
+
 
 
 
