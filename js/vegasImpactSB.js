@@ -7,7 +7,7 @@ d3.csv("data/vegasSB.csv")
         data.forEach(d => {
             d.value = +d.value;
         });
-
+        console.log("HERE");
         // Initialize the page
         initEconomicImpactChart(data);
     })

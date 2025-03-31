@@ -274,78 +274,91 @@
     </div>
     <div class="section" id="section10">
         <div class="container">
-        <div class="vis-block" id="eco-impact-block">
-          <h3 style="text-align: center;">Estimated Economic Impact of Formula 1 Races by Country</h3>
-          <div class="title-divider1"></div>
+            <div class="row" id="headerVisual2">
+                <h1>Succes in the U.S.</h1>
+                <div class="line-container-10">
+                    <div class="main-line-10"></div>
+                    <div class="secondary-line-10"></div>
+                    <div class="accent-line-10"></div>
+                </div>
+                <h4>Why Globalization was the right decision</h4>
+            </div>
+            <div class="my-box">
+            <div class="vis-block" id="eco-impact-block">
+                <h3 style="text-align: center; margin-top: 15px;">Estimated Economic Impact of Formula 1 Races by Country</h3>
     
-          <section class="container" id="visual5"></section>
+                <section class="container" id="visual5"></section>
     
-          <div id="legend-container" style="text-align:center; margin-top: 15px;"></div>
-          <div class="centered-controls" style=" text-align: center;">
-            <label><input type="checkbox" id="toggle-scale" /> Log Scale</label>
-            &nbsp;&nbsp;
-            <label><input type="checkbox" id="toggle-color" /> Color by Continent</label>
-          </div>
+                <div id="legend-container" style="text-align:center;"></div>
+                <div class="centered-controls" style=" text-align: center;">
+                    <label><input type="checkbox" id="toggle-scale" /> Log Scale</label>
+                    &nbsp;&nbsp;
+                    <label><input type="checkbox" id="toggle-color" /> Color by Continent</label>
+                </div>
 
-        <div style="text-align: center; margin-top: 10px;">
-            <span id="info-button" style="
-              display: inline-block;
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              background-color: #007bff;
-              color: white;
-              font-weight: bold;
-              text-align: center;
-              line-height: 20px;
-              cursor: pointer;
-              user-select: none;
-            ">!</span>
-          </div>
+                <div style="text-align: center; margin-top: 5px;">
+                    <span id="info-button" style="
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #007bff;
+                        color: white;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 30px;
+                        cursor: pointer;
+                        user-select: none;
+                        outline: 4px solid white;
+                        outline-offset: 4px;
+                        ">!</span>
+                </div>
           
-          <div id="info-message" style="
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            max-width: 300px;
-            margin: 8px auto 0 auto;
-            height: auto;
-          ">
-            Notice the success of races outside of Europe!
-          </div>
-        </div>
+                <div id="info-message" style="
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #333;
+                        background-color: #f9f9f9;
+                        padding: 6px 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        max-width: 300px;
+                        margin: 8px auto 0 auto;
+                        height: auto;
+                    ">
+                     Notice the success of races outside of Europe!
+                </div>
+            </div>
+            </div>
+            
+            <div class="my-box">
+            <div class="vis-block" id="revenue-block">
+                <h3 style="text-align: center;">Tracking Formula 1’s Revenue Growth Through Disruptions and Expansions</h3>
+                <section class="container" id="visual6"></section>
     
-        <div class="vis-block" id="revenue-block">
-          <h3 style="text-align: center;">Tracking Formula 1’s Revenue Growth Through Disruptions and Expansions</h3>
-          <div class="title-divider2"></div>
-          <section class="container" id="visual6"></section>
-    
-          <div id="revenue-info-message" style="
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-align: center;
-            font-size: 14px;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 6px 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            max-width: 300px;
-            margin: 8px auto 0 auto;
-            height: auto;
-            ">
-            The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
+                 <div id="revenue-info-message" style="
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #333;
+                        background-color: #f9f9f9;
+                        padding: 6px 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        max-width: 300px;
+                        margin: 8px auto 0 auto;
+                        height: auto;
+                        ">
+                        The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
+                </div>
+            </div>
         </div>
         </div>
-    </div>
           
         
           
@@ -424,6 +437,8 @@
 
 <script src="js/mapSetUp.js"></script>
 <script src="js/fanMap.js"></script>
+
+<script src="js/vegasImpactSB.js"></script>
 
 <script>
     new fullpage('#fullpage', {

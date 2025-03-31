@@ -123,7 +123,7 @@ body {
 }
 
 #visual5 {
-  height: 250px;
+  height: 150px;
 }
 
 #visual6 {
@@ -143,14 +143,14 @@ body {
 
 
 .title-divider1 {
-  width: 55%;
+  width: 60%;
   height: 4px;
   background-color: #CD2D1E;
   margin: 0 auto 30px auto;
 }
 
 .title-divider2 {
-  width: 65%;
+  width: 75%;
   height: 4px;
   background-color: #CD2D1E;
   margin: 0 auto 30px auto;
@@ -180,5 +180,74 @@ body {
 #section10 .container{
   position: relative;
   z-index: 2;
+  color: white;
+  font-size: 20px;
+}
+
+/* Header styling */
+#section10 #headerVisual2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+#section10 #headerVisual2 h1 {
+  font-size: 3rem;
+  color: white;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+#section10  #headerVisual2 h4 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.line-container-10 {
+  position: relative;
+  top: -15px;
+  left: 30%;
+}
+
+.main-line-10 {
+  width: 500px;
+  height: 10px;
+  background-color: #CD2D1E;
+  transform: skewX(-30deg);
+}
+
+.secondary-line-10 {
+  width: 493px;
+  height: 10px;
+  background-color: #CD2D1E;
+  transform: skewX(-30deg);
+  margin-top: 3px;
+}
+
+.accent-line-10 {
+  position: absolute;
+  width: 10px;
+  height: 23px;
+  background-color: #CD2D1E;
+  transform: skewX(-30deg);
+  right: 795px;
+  top: 0;
+}
+
+.my-box {
+  background-color: rgba(50, 50, 50, 0.4);
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#section10  h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
   color: white;
 }
