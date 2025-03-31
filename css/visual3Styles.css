@@ -36,7 +36,6 @@
     font-size: 1.3rem;
     color: white;
     font-weight: 400;
-    font-family: 'Georgia', serif;
 }
 
 /* UNDERLINE WITH TWO LINES*/
@@ -72,20 +71,25 @@
 }
 
 /* KEY STATS COLUMN*/
-#visual3 #viewership-infoVisual3 {
+#visual3 #viewership-infoVisual3, #visual3 #valuation-graph {
     background-color: rgba(10, 10, 10, 0.7);
     padding: 20px;
     border-radius: 8px;
     margin-top: 10px;
 }
 
-#visual3 #viewership-infoVisual3 h5 {
+#visual3 #viewership-infoVisual3 h5, #visual3 #valuation-graph h5 {
     font-weight: 700;
     margin-bottom: 1rem;
     color: #ffffff;
     text-align: center;
     font-size: 1.6rem;
+
 }
+#visual3 #valuation-graph h5{
+    color: #e2e1e1;
+}
+
 
 #visual3 #viewership-infoVisual3 ul {
     display: grid;
@@ -147,7 +151,7 @@
 
 #visual3 .hover-instruction {
     position: absolute;
-    top: 10px;
+    top: 80px;
     right: 200px;
     color: #e0e0e0;
     font-size: 1rem;
