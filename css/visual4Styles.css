@@ -10,3 +10,18 @@
 #section14 h1 {
     color: white;
 }
+
+li {
+    color: white;
+  }
+  
+li a {
+    color: #4da6ff;        
+    text-decoration: underline;
+  }
+  
+li a:hover {
+    color: #3399ff;       
+  }
+  
+  
