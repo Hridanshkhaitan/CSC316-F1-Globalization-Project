@@ -1,0 +1,67 @@
+
+/* SECTION 8: VEGAS TEXT */
+
+#section8 {
+    background-image: url('../img/vegasSBComparison.jpg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+/* Dark overlay to increase contrast */
+#section8::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.section-title {
+    position: absolute;
+    top: 120px;
+    right: 25px;
+}
+
+/* UNDERLINE WITH TWO LINES*/
+.line-container {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+}
+
+.main-line {
+    width: 582px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+}
+
+.secondary-line {
+    width: 575px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    margin-top: 3px;
+}
+
+.accent-line {
+    position: absolute;
+    width: 10px;
+    height: 23px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    left: 580px;
+    top: 0;
+}
+
+#section8 .content-section1{
+    position: relative;
+}
+#section8 .content-section2{
+    position: relative;
+}
+
+#section8 .conclusion-text{
+    position: relative;
+}

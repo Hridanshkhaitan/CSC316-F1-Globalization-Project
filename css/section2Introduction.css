@@ -28,10 +28,13 @@
 .section-title {
     font-size: 3rem;
     font-weight: bold;
-
+    position: relative;
+    font-style: italic;
+    z-index: 1;
+}
+#section2 .section-title {
     position: absolute;
     top: 120px;
-    font-style: italic;
     right: 20px;
 }
 .content-section1 {
@@ -62,7 +65,7 @@
     width: 70%;
 }
 
-#section2 p.conclusion-text {
+#section2 p.conclusion-text, #section8 p.conclusion-text {
     width: 50%;
     margin: 100px auto 40px;
     padding-left: 200px;
@@ -82,37 +85,5 @@
 .highlight:hover {
     transform: scale(1.5);
     text-shadow: 0 0 10px rgba(205, 45, 30, 0.5);
-}
-
-/* UNDERLINE WITH TWO LINES*/
-.line-container {
-    position: relative;
-    top: 30px;
-    right: -1300px;
-}
-
-.main-line {
-    width: 582px;
-    height: 10px;
-    background-color: #CD2D1E;
-    transform: skewX(-30deg);
-}
-
-.secondary-line {
-    width: 575px;
-    height: 10px;
-    background-color: #CD2D1E;
-    transform: skewX(-30deg);
-    margin-top: 3px;
-}
-
-.accent-line {
-    position: absolute;
-    width: 10px;
-    height: 23px;
-    background-color: #CD2D1E;
-    transform: skewX(-30deg);
-    left: 580px;
-    top: 0;
 }
 
