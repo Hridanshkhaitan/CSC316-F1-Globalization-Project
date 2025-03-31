@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/vegasIntro.css">
     <link rel="stylesheet" href="css/negativesIntro.css">
     <link rel="stylesheet" href="css/vegasSBComparison.css">
+    <link rel="stylesheet" href="css/fanMapVisual.css">
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -365,35 +366,87 @@
     </div>
 
     <div class="section" id="section14">
-        <div style="display: flex; justify-content: center;">
-      
-          <div style="display: flex; align-items: flex-start;">
-      
-            <section class="container" id="visual10"></section>
-      
-            <div style="margin-left: 40px; margin-top: 80px;">
-              <div style="margin-bottom: 20px;">
-                <input type="range" id="yearSlider" min="0" max="3" step="1" value="0" list="yearTicks">
-                <datalist id="yearTicks">
-                  <option value="0" label="2005"></option>
-                  <option value="1" label="2010"></option>
-                  <option value="2" label="2015"></option>
-                  <option value="3" label="2021"></option>
-                </datalist>
-                <span id="yearLabel">2005</span>
-              </div>
-      
-              <div id="legendContainer"></div>
+        <section class="container" id="fanMapVisual">
+
+            <div class="container">
+                <div class="row" id="headerFanMap">
+                    <h1>THE HERITAGE DILEMMA: FAN LOYALTY VS. GLOBAL EXPANSION</h1>
+                    <div class="line-container-14">
+                        <div class="main-line-14"></div>
+                        <div class="secondary-line-14"></div>
+                        <div class="accent-line-14"></div>
+                    </div>
+                    <h4>Tracking Fan Perceptions of Grand Prix Importance (2005-2021)</h4>
+                </div>
             </div>
-      
-          </div>
-        </div>
-      </div>
-      
-      
-      
-      
-      
+            <div class="content-wrapper">
+                <!-- Map Container -->
+                <div class="map-container">
+                    <section class="container" id="visual10"></section>
+                </div>
+
+                <!-- Controls and Stats Container -->
+                <div class="controls-container">
+                    <!-- Year Slider -->
+                    <div class="slider-wrapper">
+                        <input type="range" id="yearSlider" min="0" max="3" step="1" value="0" list="yearTicks">
+                        <datalist id="yearTicks">
+                            <option value="0" label="2005"></option>
+                            <option value="1" label="2010"></option>
+                            <option value="2" label="2015"></option>
+                            <option value="3" label="2021"></option>
+                        </datalist>
+                        <span id="yearLabel">2005</span>
+                        <p class="slider-instruction">Move slider to see how fan perception changes over time</p>
+
+                    </div>
+
+                    <!-- Legend -->
+                    <div id="legendContainer"></div>
+
+                    <!-- Key Statistics -->
+                    <div class="key-stats">
+                        <h3>KEY INSIGHTS</h3>
+                        <div class="stat-item">
+                            <div class="stat-bullet"></div>
+                            <div class="stat-text">European races rated 30-40% more important by longtime fans</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-bullet"></div>
+                            <div class="stat-text">Historic circuits maintain 80%+ importance rating across all years</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-bullet"></div>
+                            <div class="stat-text">New venues struggle to exceed 50% importance in first 5 years</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intro Text -->
+            <div class="intro-text">
+                <p>As Formula 1 expands globally, fan sentiment reveals a strong attachment to traditional European races, highlighting tension between heritage preservation and market growth.</p>
+            </div>
+
+<!--            <div style="display: flex; align-items: flex-start;">-->
+
+<!--                <div style="margin-left: 40px; margin-top: 80px;">-->
+<!--                  <div style="margin-bottom: 20px;">-->
+<!--                    <input type="range" id="yearSlider" min="0" max="3" step="1" value="0" list="yearTicks">-->
+<!--                    <datalist id="yearTicks">-->
+<!--                      <option value="0" label="2005"></option>-->
+<!--                      <option value="1" label="2010"></option>-->
+<!--                      <option value="2" label="2015"></option>-->
+<!--                      <option value="3" label="2021"></option>-->
+<!--                    </datalist>-->
+<!--                    <span id="yearLabel">2005</span>-->
+<!--                  </div>-->
+<!--                    <div id="legendContainer"></div>-->
+<!--                </div>-->
+<!--                -->
+<!--            </div>-->
+        </section>
+    </div>
       
 </div>
 
@@ -433,7 +486,7 @@
         navigationPosition: 'left',
         // MAKE SURE TO REMOVE THE CODE BELOW !!!!
         afterRender: function () {
-            fullpage_api.moveTo(10); // Moves to the second section
+            fullpage_api.moveTo(12); // Moves to the second section
         }
     });
 </script>

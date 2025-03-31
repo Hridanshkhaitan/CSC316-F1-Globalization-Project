@@ -1,0 +1,176 @@
+/* SECTION 14: FAN MAP */
+
+/* Background*/
+#section14 {
+    background-image: url('../img/dtsEffectBackground.jpeg');
+    background-size: cover;
+    color: white;
+    position: relative;
+}
+
+/* Dark overlay to increase contrast */
+#section14::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+
+#section14 .container {
+    position: relative;
+    z-index: 2;
+}
+
+/*HEADER*/
+#headerFanMap {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#headerFanMap h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#headerFanMap h4 {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+/* UNDERLINE WITH TWO LINES*/
+.line-container-14 {
+    position: relative;
+    top: 0;
+    left: 270px;
+}
+
+.main-line-14 {
+    width: 724px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+}
+
+.secondary-line-14 {
+    width: 717px;
+    height: 10px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    margin-top: 3px;
+}
+
+.accent-line-14 {
+    position: absolute;
+    width: 10px;
+    height: 23px;
+    background-color: #CD2D1E;
+    transform: skewX(-30deg);
+    right: 526px;
+    top: 0;
+}
+
+/* CONTENT LAYOUT */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.controls-container {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+
+.slider-instruction {
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    color: #cccccc;
+    font-size: 16px;
+}
+
+
+#yearSlider {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#yearLabel {
+    margin-left: 10px;
+    font-size: 16px;
+
+}
+
+/* KEY STATS*/
+.key-stats {
+    margin-top: 20px;
+    background-color: rgba(35, 35, 35, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.key-stats h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.stat-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.stat-bullet {
+    width: 16px;
+    height: 16px;
+    background-color: #e63946;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.stat-text {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Intro text styling */
+.intro-text {
+    max-width: 800px;
+    margin: 30px auto 0;
+    text-align: center;
+    color: #a8a8a8;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    font-size: 14px;
+    z-index: 1000;
+    max-width: 200px;
+}
+
+
+path:hover {
+    cursor: pointer;
+}

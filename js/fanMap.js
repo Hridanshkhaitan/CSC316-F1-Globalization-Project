@@ -8,8 +8,7 @@ class FanMap {
     }
 
     initVis() {
-        console.log(data);
-        console.log("googledigoop");
+
         const vis = this;
     
         vis.margin = { top: 20, right: 20, bottom: 20, left: 20 };
@@ -41,7 +40,7 @@ class FanMap {
 
         vis.colorScale = d3.scaleLinear()
             .domain([0, 8, 15, 100])
-            .range(["blue", "green", "yellow", "red"]);
+            .range(["red", "pink", "purple", "blue"]);
 
 
     const legendWidth = 40;
@@ -62,10 +61,10 @@ class FanMap {
 
     gradient.selectAll("stop")
         .data([
-            { offset: "0%", color: "blue" },
-            { offset: "8%", color: "green" },
-            { offset: "15%", color: "yellow" },
-            { offset: "100%", color: "red" }
+            { offset: "0%", color: "red" },
+            { offset: "8%", color: "pink" },
+            { offset: "15%", color: "purple" },
+            { offset: "100%", color: "blue" }
         ])
         .enter()
         .append("stop")
@@ -89,7 +88,9 @@ class FanMap {
 
     legendSvg.append("g")
         .attr("transform", `translate(${10 + legendWidth}, 10)`)
-        .call(legendAxis);
+        .call(legendAxis)
+        .selectAll("text")
+        .attr("fill", "white");
 
             
         vis.wrangleData();
@@ -122,7 +123,7 @@ class FanMap {
                 const countryData = vis.dataByCountry[countryName];
             
                 if (!countryData) {
-                    // console.log("No match in CSV for:", countryName);
+                    console.log("No match in CSV for:", countryName);
                     return "grey";
                 }
             
