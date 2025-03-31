@@ -134,10 +134,9 @@
 }
 
 .stat-bullet {
-    width: 16px;
-    height: 16px;
-    background-color: #e63946;
-    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: url("../img/racing.png") no-repeat center center / cover;
     margin-right: 15px;
     margin-top: 3px;
     flex-shrink: 0;
