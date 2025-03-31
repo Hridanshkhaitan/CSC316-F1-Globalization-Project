@@ -86,7 +86,7 @@ function wrangleData() {
           const titles = ["Terrence Allder", "David Atanasov", "Hridansh Khaitan"];
           const subtitles = [
             "Math Specialist + CS minor",
-            "Whatever you study",
+            "Bioinformatics & CS",
             "Whatever you study"
           ];
           
