@@ -40,7 +40,10 @@ class FanMap {
 
         vis.colorScale = d3.scaleLinear()
             .domain([0, 8, 15, 100])
-            .range(["red", "pink", "purple", "blue"]);
+            .range(["#ff4d4d", "#ffcc00", "#33cc33", "#1c1c1c"]);
+
+
+
 
 
     const legendWidth = 40;
@@ -61,10 +64,11 @@ class FanMap {
 
     gradient.selectAll("stop")
         .data([
-            { offset: "0%", color: "red" },
-            { offset: "8%", color: "pink" },
-            { offset: "15%", color: "purple" },
-            { offset: "100%", color: "blue" }
+                { offset: "0%", color: "#ff4d4d" },  
+                { offset: "8%", color: "#ffcc00" },   
+                { offset: "15%", color: "#33cc33" },  
+                { offset: "100%", color: "#1c1c1c" }  
+              
         ])
         .enter()
         .append("stop")
