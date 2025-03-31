@@ -83,7 +83,7 @@ class EcoVis {
             .attr("x", vis.width)
             .attr("y", vis.height / 2 + 40)
             .attr("text-anchor", "end")
-            .style("font-size", "16px")
+            .style("font-size", "20px")
             .attr("fill", "white")
             .text("Estimated Economic Impact ($M)");
           

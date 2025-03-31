@@ -36,14 +36,16 @@ class RevenueVis {
         .attr("y", vis.height + 35)
         .attr("text-anchor", "middle")
         .attr("font-size", "12px")
+        .style("fill", "white")
         .text("Year");
   
       vis.svg.append("text")
         .attr("x", -vis.height / 2)
-        .attr("y", -45)
+        .attr("y", -50)
         .attr("text-anchor", "middle")
         .attr("transform", "rotate(-90)")
-        .attr("font-size", "12px")
+        .attr("font-size", "14px")
+        .style("fill", "white")
         .text("Revenue ($ Millions)");
   
       vis.wrangleData();
@@ -86,7 +88,7 @@ class RevenueVis {
     
       vis.svg.selectAll(".x-axis text, .y-axis text")
         .attr("fill", "white")
-        .attr("font-size", "16px");
+        .attr("font-size", "13px");
     
 
       const line = d3.line()
@@ -119,7 +121,7 @@ class RevenueVis {
       .attr("x", vis.xScale(2019.5))
       .attr("y", vis.yScale(0) - 15)
       .attr("text-anchor", "middle")
-      .attr("font-size", "13px")
+      .attr("font-size", "12px")
       .style("fill", "white")
       .text("COVID-19 Pandemic");
 
@@ -135,7 +137,7 @@ class RevenueVis {
       .attr("x", vis.xScale(2022.5))
       .attr("y", vis.yScale(3600) - 6)
       .attr("text-anchor", "middle")
-      .attr("font-size", "13px")
+      .attr("font-size", "12px")
       .style("fill", "white")
       .text("Reintroduction of Las Vegas GP");
 
@@ -147,6 +149,12 @@ class RevenueVis {
     const infoX = vis.xScale(2022.5);
     const infoY = vis.yScale(2900);
 
+
+    vis.svg.append("circle")
+      .attr("cx", infoX)
+      .attr("cy", infoY)
+      .attr("r", 10)
+      .attr("fill", "white");
 
     vis.svg.append("circle")
       .attr("id", "revenue-info-button")
