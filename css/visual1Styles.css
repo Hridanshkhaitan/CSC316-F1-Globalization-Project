@@ -1,7 +1,7 @@
 /* SECTION 6: F1 CALENDAR */
 
 /* Background*/
-#section6 {
+#section16 {
     background-image: url('../img/calendarBackground.jpeg');
     background-size: cover;
     color: white;
@@ -9,7 +9,7 @@
 }
 
 /* Dark overlay to increase contrast */
-#section6::before {
+#section16::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -17,7 +17,7 @@
     z-index: 0;
 }
 
-#section6 .container {
+#section16 .container {
     position: relative;
     z-index: 2;
 }

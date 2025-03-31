@@ -195,6 +195,129 @@
 <!--        </p>-->
     </div>
     <div class="section" id="section6">
+        <section class="container" id="visualSBComparison">
+            <div class="container">
+
+                <div class="row" id="headerVisualSBComparison">
+                    <h1>THE VEGAS JACKPOT</h1>
+                    <div class="line-container-9">
+                        <div class="main-line-9"></div>
+                        <div class="secondary-line-9"></div>
+                        <div class="accent-line-9"></div>
+                    </div>
+                    <h4>The Success Story of Formula 1's Biggest Spectacle</h4>
+                </div>
+
+                <div class="row" id="svg-containerVisualSBComparison">
+
+                    <div class="col-sm-6" id="economicImpactContainer">
+                        <h3 class="chart-header">ECONOMIC IMPACT COMPARISON</h3>
+                        <div id="economicImpactSB"></div>
+                    </div>
+                    <div class="col-sm-6" id="economicBreakdownContainer">
+                        <h3 class="chart-header">ECONOMIC BREAKDOWN</h3>
+                        <div id="economicBreakdown">
+                            <button id="toggleEconomicView" class="toggle-btn">Switch to Bar Chart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="section" id="section7">
+        <div class="container">
+            <div class="row" id="headerVisual15">
+                <h1>Success in the U.S.</h1>
+                <div class="line-container-10">
+                    <div class="main-line-10"></div>
+                    <div class="secondary-line-10"></div>
+                    <div class="accent-line-10"></div>
+                </div>
+                <h4>Why Globalization was the right decision</h4>
+            </div>
+            <div class="my-box">
+                <div class="vis-block" id="eco-impact-block">
+                    <h3 style="text-align: center; margin-top: 15px;">Estimated Economic Impact of Formula 1 Races by Country</h3>
+
+                    <section class="container" id="visual5"></section>
+
+                    <div id="legend-container" style="text-align:center;"></div>
+                    <div class="centered-controls" style=" text-align: center;">
+                        <label><input type="checkbox" id="toggle-scale" /> Log Scale</label>
+                        &nbsp;&nbsp;
+                        <label><input type="checkbox" id="toggle-color" /> Color by Continent</label>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 5px;">
+                    <span id="info-button" style="
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        background-color: #007bff;
+                        color: white;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 30px;
+                        cursor: pointer;
+                        user-select: none;
+                        outline: 4px solid white;
+                        outline-offset: 4px;
+                        ">!</span>
+                    </div>
+
+                    <div id="info-message" style="
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #333;
+                        background-color: #f9f9f9;
+                        padding: 6px 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        max-width: 300px;
+                        margin: 8px auto 0 auto;
+                        height: auto;
+                    ">
+                        Notice the success of races outside of Europe!
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-box">
+                <div class="vis-block" id="revenue-block">
+                    <h3 style="text-align: center;">Tracking Formula 1’s Revenue Growth Through Disruptions and Expansions</h3>
+                    <section class="container" id="visual6"></section>
+
+                    <div id="revenue-info-message" style="
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #333;
+                        background-color: #f9f9f9;
+                        padding: 6px 12px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        max-width: 300px;
+                        margin: 8px auto 0 auto;
+                        height: auto;
+                        ">
+                        The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="section" id="section16">
         <section class="container" id="visual1">
             <div class="container">
                 <div class="row" id="header">
@@ -228,40 +351,10 @@
             </div>
         </section>
     </div>
-    <div class="section" id="section7">
+    <div class="section" id="section17">
         <section class="container" id="monaco-viz">
             <h1 id="main-title">2024 <span>Monaco GP</span> Speed Comparison</h1>
             <div id="speed-comparison"></div>
-        </section>
-    </div>
-    <div class="section" id="section8">
-        <section class="container" id="visualSBComparison">
-            <div class="container">
-
-                <div class="row" id="headerVisualSBComparison">
-                    <h1>THE VEGAS JACKPOT</h1>
-                    <div class="line-container-9">
-                        <div class="main-line-9"></div>
-                        <div class="secondary-line-9"></div>
-                        <div class="accent-line-9"></div>
-                    </div>
-                    <h4>The Success Story of Formula 1's Biggest Spectacle</h4>
-                </div>
-
-                <div class="row" id="svg-containerVisualSBComparison">
-
-                    <div class="col-sm-6" id="economicImpactContainer">
-                        <h3 class="chart-header">ECONOMIC IMPACT COMPARISON</h3>
-                        <div id="economicImpactSB"></div>
-                    </div>
-                    <div class="col-sm-6" id="economicBreakdownContainer">
-                        <h3 class="chart-header">ECONOMIC BREAKDOWN</h3>
-                        <div id="economicBreakdown">
-                            <button id="toggleEconomicView" class="toggle-btn">Switch to Bar Chart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     </div>
     <div class="section" id="section9">
@@ -274,98 +367,6 @@
                 <p class="hidden-costs-description">The rising costs and challenges of following Formula 1</p>
             </div>
         </div>
-    </div>
-    <div class="section" id="section10">
-        <div class="container">
-            <div class="row" id="headerVisual15">
-                <h1>Success in the U.S.</h1>
-                <div class="line-container-10">
-                    <div class="main-line-10"></div>
-                    <div class="secondary-line-10"></div>
-                    <div class="accent-line-10"></div>
-                </div>
-                <h4>Why Globalization was the right decision</h4>
-            </div>
-            <div class="my-box">
-            <div class="vis-block" id="eco-impact-block">
-                <h3 style="text-align: center; margin-top: 15px;">Estimated Economic Impact of Formula 1 Races by Country</h3>
-    
-                <section class="container" id="visual5"></section>
-    
-                <div id="legend-container" style="text-align:center;"></div>
-                <div class="centered-controls" style=" text-align: center;">
-                    <label><input type="checkbox" id="toggle-scale" /> Log Scale</label>
-                    &nbsp;&nbsp;
-                    <label><input type="checkbox" id="toggle-color" /> Color by Continent</label>
-                </div>
-
-                <div style="text-align: center; margin-top: 5px;">
-                    <span id="info-button" style="
-                        display: inline-block;
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 50%;
-                        background-color: #007bff;
-                        color: white;
-                        font-weight: bold;
-                        text-align: center;
-                        line-height: 30px;
-                        cursor: pointer;
-                        user-select: none;
-                        outline: 4px solid white;
-                        outline-offset: 4px;
-                        ">!</span>
-                </div>
-          
-                <div id="info-message" style="
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                        text-align: center;
-                        font-size: 14px;
-                        color: #333;
-                        background-color: #f9f9f9;
-                        padding: 6px 12px;
-                        border: 1px solid #ccc;
-                        border-radius: 6px;
-                        max-width: 300px;
-                        margin: 8px auto 0 auto;
-                        height: auto;
-                    ">
-                     Notice the success of races outside of Europe!
-                </div>
-            </div>
-            </div>
-            
-            <div class="my-box">
-            <div class="vis-block" id="revenue-block">
-                <h3 style="text-align: center;">Tracking Formula 1’s Revenue Growth Through Disruptions and Expansions</h3>
-                <section class="container" id="visual6"></section>
-    
-                 <div id="revenue-info-message" style="
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: opacity 0.3s ease;
-                        text-align: center;
-                        font-size: 14px;
-                        color: #333;
-                        background-color: #f9f9f9;
-                        padding: 6px 12px;
-                        border: 1px solid #ccc;
-                        border-radius: 6px;
-                        max-width: 300px;
-                        margin: 8px auto 0 auto;
-                        height: auto;
-                        ">
-                        The 2022–2023 period saw the largest single-year revenue growth of approximately $655M — greater than any other year-to-year increase before or after the COVID recovery (excluding the 2020–2021 rebound).
-                </div>
-            </div>
-        </div>
-        </div>
-          
-        
-          
-
     </div>
     <div class="section" id="section12">
         <h2 class="section-title">The Victory in Vegas</h2>

@@ -1,7 +1,7 @@
 /* SECTION 9: VEGAS SB COMPARISON */
 
 /* Background*/
-#section8 {
+#section6 {
     background-image: url('../img/vegasSBComparison.jpg');
     background-size: cover;
     color: white;
@@ -9,7 +9,7 @@
 }
 
 /* Dark overlay to increase contrast */
-#section8::before {
+#section6::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -17,7 +17,7 @@
     z-index: 0;
 }
 
-#section8 .container {
+#section6 .container {
     position: relative;
     z-index: 2;
 }
