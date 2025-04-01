@@ -1,6 +1,45 @@
 # CSC316-F1-Globalization-Project
 
-## Data
+## Urls and Links
+
+Check out our project screencast [video](https://youtu.be/-Z5MlNmHH2k) and the [GitHub page](https://hridanshkhaitan.github.io/F1-Globalization-Project/).
+
+## About the Project
+
+This project is a visualization of the positive and negative effects of the F1 globalization. 
+We begin by presenting the positives, diving into the economic impact of the Las Vegas race and the financial incentives for globalization.
+We then look at the drawbacks, the high ticket prices of newer races and the fan sentiment that GPs have lost their value.
+
+#### Non-obvious Feature
+
+Page 2: hovering over red numbers has a pop-out effect
+
+Page 3: hovering over boxes has a pop-out effect
+
+Page 8: hovering red numbers has a pop-out effect
+
+Page 12: authors circles change colours on refresh
+
+## Files and Structure
+
+### CSS
+
+- fanMapVisual.css
+- negativesIntro.css
+- section2Introduction.css
+- section8VegasText.css
+- styles.css
+- stylesVegas.css
+- vegasIntro.css
+- vegasSBComparison.css
+- visual1Styles.css
+- visual2Styles.css
+- visual3Styles.css
+- visual4Styles.css
+
+
+
+### Data
 
 - driverImages/
 - 2024_Monaco_GP_Fastest_Laps.csv
@@ -19,6 +58,6 @@
 - world.geojson
 
 
-## JS
+### JS
 
 The js folder contains all of our code. Most files follow the init, wrangle, update pipeline.
