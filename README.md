@@ -10,7 +10,7 @@ This project is a visualization of the positive and negative effects of the F1 g
 We begin by presenting the positives, diving into the economic impact of the Las Vegas race and the financial incentives for globalization.
 We then look at the drawbacks, the high ticket prices of newer races and the fan sentiment that GPs have lost their value.
 
-#### Non-obvious Feature
+#### Non-Obvious Features
 
 Page 2: hovering over red numbers has a pop-out effect
 
