@@ -22,6 +22,8 @@ Page 12: authors circles change colours on refresh
 
 ## Files and Structure
 
+index.html the html code for our project
+
 ### CSS
 
 - fanMapVisual.css
@@ -61,3 +63,22 @@ Page 12: authors circles change colours on refresh
 ### JS
 
 The js folder contains all of our code. Most files follow the init, wrangle, update pipeline.
+
+- bars.js  
+- ecoImpactComparison.js  
+- ecoVisSetUp.js  
+- fanMap.js  
+- iconVis.js  
+- keyMarkets.js  
+- main.js  
+- mapSetUp.js  
+- revenueSetUp.js  
+- revenueVis.js  
+- valuations.js  
+- vegasGP.js  
+- vegasImpactSB.js  
+- visual1Main.js  
+- visual2Main.js  
+- visual3Main.js  
+- visualization.js  
+
