@@ -82,3 +82,11 @@ The js folder contains all of our code. Most files follow the init, wrangle, upd
 - visual3Main.js  
 - visualization.js  
 
+### Images
+
+The img folder contains all the different images we used for the project.
+
+- backgroundImages: Contains all background images
+- layouts: Contains the track layouts for all races
+- teamLogos: Contains all F1 team's logos
+- racing.png: Icon used for bullet points
