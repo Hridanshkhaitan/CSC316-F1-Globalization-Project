@@ -70,7 +70,7 @@ body {
 
 /* ---- SECTION 1 Landing Page Styles ---- */
 #section1 {
-  background-image: url('../img/landingPageImg.jpeg');
+  background-image: url('../img/backgroundImages/landingPageImg.jpeg');
   background-size: cover;
   display: flex;
   align-items: center;
@@ -147,7 +147,7 @@ body {
 
 /* Background*/
 #section7 {
-  background-image: url('../img/bgVegasGraphs.avif');
+  background-image: url('../img/backgroundImages/bgVegasGraphs.avif');
   background-size: cover;
   color: white;
   position: relative;
@@ -155,7 +155,7 @@ body {
 }
 
 #section13 {
-  background-image: url('../img/pitStop.jpg');
+  background-image: url('../img/backgroundImages/pitStop.jpg');
   background-size: cover;
   color: white;
   position: relative;
